@@ -1,0 +1,62 @@
+/* 1. Definir o uso de border box em todas as páginas */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. as margens que vou definir nos elementos são exactamente aquilo que eu definir */
+* {
+  margin: 0;
+}
+
+/* 3. Definir o espaçamento base e suavização de fontes, útil para Mac */
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased; 
+}
+
+/* 4. eliminar eventuais espaços entre imagens */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. para garantir que os elementos que requerem input, usem a fonte adoptada */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. Prevenir overflow de texto */
+p,
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 7. remoção de estilos nas listas */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+
+/* 8. Remoção dos estilos predefinidos dos links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 9. Remoção dos estilos predefinidos dos botões */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}

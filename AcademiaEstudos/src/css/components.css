@@ -1,0 +1,328 @@
+/* estilos aplicados aos componentes */
+/* ============================================
+   Academia de Estudos — Layout
+   layout.css
+   
+   Handles: container, grid system, section
+   wrappers, navbar, footer, hero, and
+   utility layout classes.
+   
+   Does NOT handle: colors, fonts, components.
+   Those live in their own files.
+   ============================================ */
+
+
+/* ============================================
+   1. CONTAINER
+   Central content wrapper used on every page.
+   Max-width 1200px, centered, with side padding
+   so content never touches viewport edges.
+   ============================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-5); /* 40px each side */
+}
+
+
+/* ============================================
+   2. SECTION WRAPPERS
+   Every page section gets .section.
+   Alternating backgrounds use modifier classes.
+   ============================================ */
+
+.section {
+  padding: var(--space-10) 0; /* 80px top/bottom */
+}
+
+/* Hero gets extra breathing room */
+.section--hero {
+  padding: var(--space-12) 0; /* 96px top/bottom */
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Light alternating section (mid-page rhythm break) */
+.section--light {
+  background-color: var(--color-surface-subtle);
+}
+
+/* Dark section (footer, hero, CTAs) */
+.section--dark {
+  background-color: var(--color-navy-deep);
+}
+
+/* Mid-tone section (cards, testimonials) */
+.section--card {
+  background-color: var(--color-surface-card);
+}
+
+/* Section header block — eyebrow + title pattern */
+.section__header {
+  margin-bottom: var(--space-6); /* 48px */
+}
+
+.section__eyebrow {
+  display: block;
+  margin-bottom: var(--space-1); /* 8px */
+  /* Color and font set in typography.css */
+}
+
+.section__title {
+  margin-bottom: var(--space-2); /* 16px */
+}
+
+.section__subtitle {
+  max-width: 600px;
+}
+
+/* Centered variant — for sections where content is centered */
+.section__header--centered {
+  text-align: center;
+}
+
+.section__header--centered .section__subtitle {
+  margin: 0 auto;
+}
+
+
+/* ============================================
+   3. GRID SYSTEM
+   Simple, reusable column grids.
+   All collapse to 1 column on mobile.
+   ============================================ */
+
+.grid {
+  display: grid;
+  gap: var(--space-4); /* 32px default gap */
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Auto-fill grid — responsive without media queries */
+/* Use for course cards, exam cards — min 260px per column */
+.grid--auto {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* Asymmetric layout: sidebar + main content */
+.grid--sidebar {
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-6); /* 48px */
+}
+
+/* Tighter gap variant */
+.grid--tight {
+  gap: var(--space-2); /* 16px */
+}
+
+
+/* ============================================
+   4. NAVBAR
+   Fixed top, full width, 64px tall.
+   Content constrained inside .container.
+   ============================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  /* Background + border set in components.css */
+}
+
+.navbar__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  flex-shrink: 0;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4); /* 32px between links */
+  list-style: none;
+}
+
+.navbar__cta {
+  flex-shrink: 0;
+}
+
+/* Offset page content so it starts below the fixed navbar */
+body {
+  padding-top: 64px;
+}
+
+
+/* ============================================
+   5. FOOTER
+   Full-width dark footer with .container inside.
+   3-column grid collapses to 1 on mobile.
+   ============================================ */
+
+.footer {
+  padding: var(--space-10) 0 var(--space-5); /* 80px top, 40px bottom */
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* brand column wider */
+  gap: var(--space-8); /* 64px */
+  margin-bottom: var(--space-8);
+}
+
+.footer__brand {
+  /* Brand column — logo, tagline, socials */
+}
+
+.footer__links {
+  list-style: none;
+}
+
+.footer__links li + li {
+  margin-top: var(--space-2); /* 16px between links */
+}
+
+.footer__bottom {
+  padding-top: var(--space-4); /* 32px */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ============================================
+   6. HERO LAYOUT
+   Two-column split: text left, image right.
+   Image column hides on mobile.
+   ============================================ */
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8); /* 64px */
+  align-items: center;
+  width: 100%;
+}
+
+.hero__content {
+  /* Text side */
+}
+
+.hero__media {
+  /* Image/visual side */
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ============================================
+   7. UTILITY CLASSES
+   Small helpers to avoid repetition.
+   ============================================ */
+
+/* Flex shortcuts */
+.flex          { display: flex; }
+.flex--center  { display: flex; align-items: center; justify-content: center; }
+.flex--between { display: flex; align-items: center; justify-content: space-between; }
+.flex--gap-sm  { gap: var(--space-1); } /* 8px  */
+.flex--gap-md  { gap: var(--space-2); } /* 16px */
+.flex--gap-lg  { gap: var(--space-4); } /* 32px */
+
+/* Spacing helpers */
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+
+/* Visibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+
+/* ============================================
+   8. RESPONSIVE BREAKPOINTS
+   Mobile-first approach.
+   All grids collapse to single column below 768px.
+   Navbar becomes hamburger below 768px.
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Tighten section padding on mobile */
+  .section        { padding: var(--space-8) 0; }   /* 64px */
+  .section--hero  { padding: var(--space-8) 0; min-height: 60vh; }
+
+  /* Container side padding narrows */
+  .container { padding: 0 var(--space-2); } /* 16px each side */
+
+  /* All grids collapse to 1 column */
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .grid--sidebar { grid-template-columns: 1fr; }
+
+  /* Footer grid collapses */
+  .footer__grid { grid-template-columns: 1fr; gap: var(--space-5); }
+  .footer__bottom { flex-direction: column; gap: var(--space-2); text-align: center; }
+
+  /* Hero: stack vertically, hide image */
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__media  { display: none; }
+
+  /* Navbar: hide desktop links */
+  .navbar__links { display: none; }
+  .navbar__links.is-open { /* JS toggles this */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-navy-deep);
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+}

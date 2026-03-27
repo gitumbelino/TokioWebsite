@@ -1,0 +1,17 @@
+
+/* define as propriedades das "fonts" 
+hereditando também variáveis já definidas em variables.css */
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-base);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
