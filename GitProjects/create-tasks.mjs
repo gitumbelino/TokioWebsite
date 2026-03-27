@@ -6,7 +6,7 @@
 // Both files must be in the same folder
 // ============================================================
 
-import { LABELS, TASKS } from "./tasks/design-tasks.mjs";
+import { LABELS, TASKS } from "./tasks/dev-tasks.mjs";
 import { config } from "dotenv";
 config({ path: "../.env" });
 
