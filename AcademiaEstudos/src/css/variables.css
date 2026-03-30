@@ -13,33 +13,42 @@ transições.
 
   /* TYPOGRAPHY */
   --font-heading: 'Barlow Condensed', sans-serif;
-  --font-body:    'Barlow', sans-serif;
+  --font-body: 'Barlow', sans-serif;
 
   /* NAVY SCALE */
-  --color-navy-deep:   #0C1B2E;
-  --color-navy-mid:    #1A3354;
-  --color-navy-light:  #3B6080;
-  --color-navy-muted:  #8BAFC8;
+  --color-navy-deep: #0C1B2E;
+  --color-navy-mid: #1A3354;
+  --color-navy-light: #3B6080;
+  --color-navy-muted: #8BAFC8;
 
   /* SURFACES */
-  --color-surface-base:   #FFFFFF;
+  --color-surface-base: #FFFFFF;
   --color-surface-subtle: #F6F8FA;
-  --color-surface-card:   #EAEFF4;
-  --color-text-base:      #1E1E1E;
+  --color-surface-card: #EAEFF4;
+
+  /* TEXT */
+  --color-text-base: #1E1E1E;
+  --color-text-bright: #ffffff;
+
+
+
 
   /* ACCENTS */
-  --color-accent-primary:  #E05B3A; /* ember — CTAs (call to action) */
-  --color-accent-prestige: #C8A84B; /* gold — badges, stats */
-  --color-accent-utility:  #00897B; /* teal — links, icons */
+  --color-accent-primary: #E05B3A;
+  /* ember — CTAs (call to action) */
+  --color-accent-prestige: #C8A84B;
+  /* gold — badges, stats */
+  --color-accent-utility: #00897B;
+  /* teal — links, icons */
 
   /* SPACING (8pt grid) */
-  --space-1:  8px;
-  --space-2:  16px;
-  --space-3:  24px;
-  --space-4:  32px;
-  --space-5:  40px;
-  --space-6:  48px;
-  --space-8:  64px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
   --space-10: 80px;
   --space-12: 96px;
 
