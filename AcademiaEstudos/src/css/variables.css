@@ -14,6 +14,8 @@ transições.
   /* TYPOGRAPHY */
   --font-heading: 'Barlow Condensed', sans-serif;
   --font-body: 'Barlow', sans-serif;
+  --color-text-base: #1E1E1E;
+  --color-text-bright: #ffffff;
 
   /* NAVY SCALE */
   --color-navy-deep: #0C1B2E;
@@ -25,12 +27,6 @@ transições.
   --color-surface-base: #FFFFFF;
   --color-surface-subtle: #F6F8FA;
   --color-surface-card: #EAEFF4;
-
-  /* TEXT */
-  --color-text-base: #1E1E1E;
-  --color-text-bright: #ffffff;
-
-
 
 
   /* ACCENTS */

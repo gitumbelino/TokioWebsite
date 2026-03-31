@@ -17,7 +17,8 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar__inner">
-        <NavLink to="/" className="navbar__logo" onClick={closeMenu}>
+
+        <NavLink to="/home" className="navbar__logo" onClick={closeMenu}>
           <span>
             <FontAwesomeIcon icon={faBookOpen} />
           </span>
@@ -26,7 +27,7 @@ export default function Navbar() {
 
         <nav className="navbar__nav">
           <ul className="navbar__links">
-            <li><NavLink to="/" end>Início</NavLink></li>
+            <li><NavLink to="/home">Início</NavLink></li>
             <li><NavLink to="/metodologia">Metodologia</NavLink></li>
             <li><NavLink to="/exames">Exames</NavLink></li>
             <li><NavLink to="/cursos">Cursos</NavLink></li>
@@ -48,7 +49,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className="navbar__mobile">
           <div className="navbar__mobile-links">
-            <NavLink to="/" end onClick={closeMenu}>Início</NavLink>
+            <NavLink to="/home" onClick={closeMenu}>Início</NavLink>
             <NavLink to="/metodologia" onClick={closeMenu}>Metodologia</NavLink>
             <NavLink to="/exames" onClick={closeMenu}>Exames</NavLink>
             <NavLink to="/cursos" onClick={closeMenu}>Cursos</NavLink>
