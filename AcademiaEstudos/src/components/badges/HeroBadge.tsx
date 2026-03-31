@@ -1,16 +1,11 @@
 interface HeroBadgeProps {
-  // No props needed for this simple badge, but you could add customization options here
+  label: string
 }
 
-
-export default function HeroBadge() {
-
-
-
-
+export default function HeroBadge({ label }: HeroBadgeProps) {
   return (
     <span className="hero-badge">
-      Excelência Comprovada
+      {label}
     </span>
   )
 }
