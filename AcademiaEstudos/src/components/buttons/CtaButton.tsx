@@ -1,14 +1,12 @@
-interface CtaButtonProps {
+interface CTAButtonProps {
   children: React.ReactNode
-  onClick?: () => void
-  className?: string
+  variant: 'filled' | 'outline'
+  href?: string
 }
 
-export default function CtaButton({ children, onClick, className = '' }
-  : CtaButtonProps) {
+export default function CTAButton({ children, variant, href }: CTAButtonProps) {
+  const cls = variant === 'filled' ? 'btn--cta-filled' : 'btn--cta-outline'
   return (
-    <button className={`btn--primary ${className}`} onClick={onClick}>
-      {children}
-    </button>
+    <a href={href} className={cls}>{children}</a>
   )
 }

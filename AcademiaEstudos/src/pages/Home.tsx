@@ -1,13 +1,15 @@
+import CTA from "../components/CTA";
+
 function Home() {
 
 
     return (
 
         <>
-            <div className="Home">
-                <h2>Home</h2>
-                <p>Uma página "Home" onde daremos as boas-vindas ao utilizador e mostraremos brevemente as secções onde encontraremos mais conteúdos. Apresentaremos também uma mensagem dinâmica mostrando a próxima data dos exames de concurso.</p>
-            </div>
+            <CTA></CTA>
+            <h1>Preparação Rigorosa Para Concursos Públicos</h1>
+            <p>Metodologia militar aplicada ao ensino civil. Disciplina, foco e resultados estruturados para garantir o seu sucesso nos exames mais exigentes.</p>
+            
         </>
     )
 

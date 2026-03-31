@@ -106,7 +106,6 @@
 }
 
 .navbar__mobile-cta {
-  /* Layout/sizing overrides for the mobile CTA — visual styles from .btn--primary */
   margin-top: var(--space-2);
   align-self: stretch;
   text-align: center;
@@ -115,7 +114,7 @@
   text-transform: uppercase;
 }
 
-/* Hamburger (mobile) */
+/* -----------Hamburger menu-------- */
 .navbar__hamburger {
   display: none;
   flex-direction: column;
@@ -125,14 +124,12 @@
   height: 32px;
   background: none;
   border: none;
-  cursor: pointer;
   padding: 0;
+  color: var(--color-text-bright);
 }
 
 .navbar__hamburger span {
   display: block;
-  height: 2px;
-  background-color: #fff;
   border-radius: 2px;
   transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
@@ -160,6 +157,19 @@
 }
 
 
+.hero-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--color-navy-mid);
+  color: var(--color-navy-muted);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+  border: 1px solid var(--color-navy-mid);
+  border-radius: 2px;
+}
 
 
 
@@ -242,4 +252,40 @@ i {
   display: flex;
   gap: var(--space-1);
   margin-top: var(--space-3);
+}
+
+
+.btn--cta-filled,
+.btn--cta-outline {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.btn--cta-filled {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-bright);
+  border: 2px solid transparent;
+}
+
+.btn--cta-filled:hover {
+  background-color: #c94d2e;
+}
+
+.btn--cta-outline {
+  background-color: transparent;
+  color: var(--color-navy-muted);
+  border: 2px solid var(--color-navy-muted);
+}
+
+.btn--cta-outline:hover {
+  color: var(--color-text-bright);
+  border-color: var(--color-text-bright);
 }

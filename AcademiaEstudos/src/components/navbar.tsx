@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './../css/components.css'
-import CtaButton from './buttons/CtaButton'
+import NavbarButton from './buttons/navbarButton'
 import HamburguerButton from './buttons/HamburguerButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
@@ -35,11 +35,9 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <CtaButton
-          className="navbar__cta"
-          onClick={closeMenu}>
-          Inscrever
-        </CtaButton>
+        <NavLink to="/login" className="btn--primary navbar__cta" onClick={closeMenu}>
+          Log in / Sign Up
+        </NavLink>
 
         <HamburguerButton
           isOpen={menuOpen}
@@ -55,9 +53,10 @@ export default function Navbar() {
             <NavLink to="/cursos" onClick={closeMenu}>Cursos</NavLink>
             <NavLink to="/contacto" onClick={closeMenu}>Contacto</NavLink>
           </div>
-          <CtaButton className="navbar__mobile-cta btn--primary" onClick={closeMenu}>
-            Inscrever
-          </CtaButton>
+          <NavbarButton
+            children="Log in / Sign Up"
+            className="navbar__mobile-cta btn--primary" onClick={closeMenu}>
+          </NavbarButton>
         </div>
       )}
     </header>

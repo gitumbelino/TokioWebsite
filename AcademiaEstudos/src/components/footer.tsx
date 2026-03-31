@@ -11,7 +11,7 @@ export default function Footer() {
 
         <div className="footer__grid">
 
-          {/* ------------ACADEMIA ---------- */}
+          {/* ------------ACADEMIA E SOCIAL ---------- */}
           <div className="footer__brand">
             <div className='footer__brand-logo'>
               <span>
@@ -52,7 +52,7 @@ export default function Footer() {
               </li>
               <li className="footer__contact-item">
                 <i className="fa-solid fa-envelope"></i>
-                <a href="mailto:info@academiadeestudos.pt">info@academiadeestudos.pt</a>
+                <a href="mailto:info@academiadeestudos.pt">info@academia.pt</a>
               </li>
               <li className="footer__contact-item">
                 <i className="fa-solid fa-phone"></i>
@@ -65,7 +65,7 @@ export default function Footer() {
 
         {/* ------------ RODAPE ---------- */}
         <div className="footer__bottom">
-          <p className="footer__copy">&copy; 2024 Academia | Todos os direitos reservados.</p>
+          <p className="footer__copy">&copy; 2026 Academia | Todos os direitos reservados.</p>
           <div className="footer__legal">
             <a href="#">Política de Privacidade |</a><a href="#">  Termos de Serviço</a>
           </div>

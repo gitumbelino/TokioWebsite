@@ -201,11 +201,12 @@ body {
 }
 
 .footer__links li + li {
-  margin-top: var(--space-2); /* 16px between links */
+  margin-top: var(--space-2); 
 }
 
 .footer__bottom {
-  padding-top: var(--space-4); /* 32px */
+  padding-top: var(--space-4); 
+/* -----------divisoria---------------- */
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
