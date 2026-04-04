@@ -56,4 +56,13 @@ transições.
   /* TRANSITIONS */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
+
+  /* LAYOUT
+     These two tokens control the stacked fixed header system.
+     The ticker is fixed at top: 0. The navbar is fixed at top: --ticker-height,
+     sitting directly below it. The body padding-top is the sum of both,
+     so page content always starts beneath the full fixed header stack.
+     Change heights here and everything adjusts automatically. */
+  --ticker-height: 40px;
+  --navbar-height: 64px;
 }

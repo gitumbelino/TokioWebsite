@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "org": "FAP",
+        "org_full": "Força Aérea Portuguesa",
+        "phase": "Fecho de Inscrições",
+        "date": "2025-04-30",
+        "url": "https://www.emfa.pt"
+    },
+    {
+        "id": 2,
+        "org": "GNR",
+        "org_full": "Guarda Nacional Republicana",
+        "phase": "Candidaturas",
+        "date": "2025-05-15",
+        "url": "https://www.gnr.pt"
+    },
+    {
+        "id": 3,
+        "org": "PSP",
+        "org_full": "Polícia de Segurança Pública",
+        "phase": "Prova Escrita",
+        "date": "2025-06-03",
+        "url": "https://www.psp.pt"
+    },
+    {
+        "id": 4,
+        "org": "FUZ",
+        "org_full": "Fuzileiros — Marinha Portuguesa",
+        "phase": "Provas de Seleção",
+        "date": "2025-06-20",
+        "url": "https://www.marinha.pt"
+    },
+    {
+        "id": 5,
+        "org": "GNR",
+        "org_full": "Guarda Nacional Republicana",
+        "phase": "Provas Físicas",
+        "date": "2025-07-08",
+        "url": "https://www.gnr.pt"
+    },
+    {
+        "id": 6,
+        "org": "PSP",
+        "org_full": "Polícia de Segurança Pública",
+        "phase": "Provas Físicas",
+        "date": "2025-07-22",
+        "url": "https://www.psp.pt"
+    }
+]

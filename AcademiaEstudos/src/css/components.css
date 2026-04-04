@@ -59,7 +59,8 @@
 /* Mobile dropdown menu */
 .navbar__mobile {
   position: fixed;
-  top: 64px;
+  /* Must clear both the ticker and the navbar to open flush below the header stack */
+  top: calc(var(--ticker-height) + var(--navbar-height));
   left: 0;
   right: 0;
   z-index: 99;
@@ -297,27 +298,140 @@ i {
   color: var(--color-accent-primary);
 }
 
-.hero__media {
-  position: relative;
+.section--dark h1 {
+  color: var(--color-text-bright);
 }
 
-.hero__media::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-accent-primary);
-  transform: translate(16px, 16px);
+.section--dark p {
+  color: var(--color-navy-muted);
+}
+
+
+.hero__media {
   border-radius: var(--radius-sm);
-  z-index: 0;
+  border: 1px solid var(--color-navy-muted);
+  box-shadow: 16px 16px 0 var(--color-accent-primary);
 }
 
 .hero__media img {
-  position: relative;
-  z-index: 1;
-  filter: grayscale(100%);
   opacity: 0.8;
   height: 500px;
-  border: 1px solid var(--color-navy-muted);
-  border-radius: var(--radius-sm);
 }
+
+
+/* --------------METODOLOGIA--------------------- */
+
+.methodology-card {
+  background-color: var(--color-surface-base);
+  padding: var(--space-5);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow var(--transition-fast);
+}
+
+.methodology-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.methodology-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-navy-deep);
+  color: var(--color-accent-prestige);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.methodology-card__title {
+  font-size: 1.25rem;
+  color: var(--color-navy-deep);
+  margin-bottom: var(--space-2);
+}
+
+.methodology-description {
+  color: #4b5563;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+
+/* --------------------------Cards example-----------------------  */
+
+
+/* ============================================
+   ANNOUNCEMENT TICKER
+   Full-width bar that cycles through items.
+   Sits between the navbar and page content.
+   ============================================ */
+
+.announcement-ticker {
+  position: fixed; /* anchors to the viewport, not the document flow */
+  top: 0;          /* occupies the very top of the screen */
+  left: 0;
+  right: 0;
+  z-index: 101;    /* one above the navbar (z-index: 100) so it always renders on top */
+  height: var(--ticker-height);
+  width: 100%;
+  background-color: var(--color-navy-deep);
+  border-bottom: 1px solid var(--color-navy-mid);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.announcement-ticker__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 32px;
+}
+
+.announcement-ticker__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;   /* ~13px — compact but legible */
+  font-weight: 500;
+  color: var(--color-text-bright);
+  background-color: rgba(26, 51, 84, 0.5); /* --color-navy-mid at 50% */
+  padding: 6px var(--space-2);
+  border-radius: var(--radius-lg);
+
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 350ms ease, transform 350ms ease;
+}
+
+.announcement-ticker__item--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.announcement-ticker__label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.announcement-ticker__divider {
+  color: var(--color-navy-muted);
+}
+
+.announcement-ticker__text {
+  color: var(--color-navy-muted);
+}
+
+@media (max-width: 768px) {
+  .announcement-ticker__item {
+    font-size: 0.75rem;
+  }
+}
+
 

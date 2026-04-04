@@ -136,11 +136,13 @@
 
 .navbar {
   position: fixed;
-  top: 0;
+  /* The ticker is fixed at top: 0 with z-index 101.
+     The navbar sits directly below it by offsetting top by the ticker's height. */
+  top: var(--ticker-height);
   left: 0;
   right: 0;
-  z-index: 100;
-  height: 64px;
+  z-index: 100; /* one level below the ticker so it never overlaps it */
+  height: var(--navbar-height);
   display: flex;
   align-items: center;
   /* Background + border set in components.css */
@@ -171,9 +173,11 @@
   flex-shrink: 0;
 }
 
-/* Offset page content so it starts below the fixed navbar */
+/* Both the ticker and navbar are fixed, so they sit on top of the normal document flow.
+   Without this padding the first section would be hidden behind them.
+   calc() keeps it in sync automatically if either height token changes. */
 body {
-  padding-top: 64px;
+  padding-top: calc(var(--ticker-height) + var(--navbar-height));
 }
 
 
@@ -316,7 +320,8 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 64px;
+    /* Must clear both the ticker and the navbar to open flush below the header stack */
+    top: calc(var(--ticker-height) + var(--navbar-height));
     left: 0;
     right: 0;
     background-color: var(--color-navy-deep);

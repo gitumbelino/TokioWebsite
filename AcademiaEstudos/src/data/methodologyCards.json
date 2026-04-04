@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "icon": "fa-solid fa-chalkboard-user",
+    "title": "Aulas Presenciais",
+    "description": "Exposição rigorosa do conteúdo com foco absoluto. Instrutores experientes conduzem sessões intensivas projetadas para maximizar a retenção e compreensão da matéria."
+  },
+  {
+    "id": 2,
+    "icon": "fa-solid fa-book-open",
+    "title": "Material de Estudo",
+    "description": "Manuais exclusivos e leis atualizadas, estruturados para facilitar a consulta rápida e a memorização. Todo o material é revisto periodicamente para refletir as últimas exigências dos exames."
+  },
+  {
+    "id": 3,
+    "icon": "fa-solid fa-user-shield",
+    "title": "Acompanhamento",
+    "description": "Tutorias individuais e feedback constante. Avaliamos o seu progresso através de métricas precisas, ajustando a estratégia de estudo para colmatar qualquer fragilidade."
+  }
+]
