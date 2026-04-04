@@ -10,11 +10,13 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AnnoucementTicker from './components/AnnouncementTicker'
 import methodologyCardsData from './data/methodologyCards.json';
+import timetableData from './data/timetable.json';
 import { useState } from 'react';
 
 function App() {
 
   const [methodologyCards] = useState(methodologyCardsData);
+  const [timetable] = useState(timetableData);
 
   return (
     <>
@@ -26,7 +28,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/cursos" element={<Courses />} />
         <Route path="/metodologia" element={<Methods
-          methodologyCards={methodologyCards} />} />
+          methodologyCards={methodologyCards}
+          timetable={timetable} />} />
         <Route path="/exames" element={<Exams />} />
         <Route path="/contacto" element={<Contacts />} />
       </Routes>

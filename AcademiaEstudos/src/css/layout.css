@@ -210,8 +210,7 @@ body {
 
 .footer__bottom {
   padding-top: var(--space-4); 
-/* -----------divisoria---------------- */
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* -----------divisoria---------------- */
   display: flex;
   align-items: center;
   justify-content: space-between;

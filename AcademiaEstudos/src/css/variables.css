@@ -37,6 +37,14 @@ transições.
   --color-accent-utility: #00897B;
   /* teal — links, icons */
 
+  /* ACCENT SUBTLE SURFACES — for badges, tags, highlights */
+  --color-accent-primary-subtle: #FAE8E3;
+  --color-accent-primary-border: #F2B9A8;
+  --color-accent-prestige-subtle: #FBF5E0;
+  --color-accent-prestige-border: #E8D48A;
+  --color-accent-utility-subtle: #E0F2F0;
+  --color-accent-utility-border: #80CBC4;
+
   /* SPACING (8pt grid) */
   --space-1: 8px;
   --space-2: 16px;
