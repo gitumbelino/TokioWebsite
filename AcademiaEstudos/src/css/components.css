@@ -322,23 +322,25 @@ i {
 /* --------------METODOLOGIA--------------------- */
 
 .methodology-card {
-  background-color: var(--color-surface-base);
+  background-color: var(--color-navy-mid);
   padding: var(--space-5);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--color-navy-light);
   border-radius: var(--radius-md);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: box-shadow var(--transition-fast);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-base);
 }
 
 .methodology-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-lg);
 }
+
 
 .methodology-icon {
   width: 56px;
   height: 56px;
   background-color: var(--color-navy-deep);
-  color: var(--color-accent-prestige);
+  color: var(--color-accent-primary);
+  border: 1px solid var(--color-navy-light);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -349,12 +351,12 @@ i {
 
 .methodology-card__title {
   font-size: 1.25rem;
-  color: var(--color-navy-deep);
+  color: var(--color-text-bright);
   margin-bottom: var(--space-2);
 }
 
 .methodology-description {
-  color: #4b5563;
+  color: var(--color-navy-muted);
   font-weight: 500;
   line-height: 1.7;
 }
@@ -368,7 +370,7 @@ i {
   overflow-x: auto;
   border: 1px solid var(--color-surface-card);
   border-radius: var(--radius-md);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
 }
 
 .timetable {
@@ -528,4 +530,214 @@ i {
   }
 }
 
+.exams__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.section__divider {
+  width: 96px;
+  height: 4px;
+  background-color: var(--color-accent-primary);
+  margin: 0 auto;
+}
+
+/* ============================================
+   EXAMS CARD
+   ============================================ */
+
+.exams-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-base);
+  border: 1px solid var(--color-surface-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+.exams-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.exams-card__left {
+  background-color: var(--color-surface-subtle);
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-surface-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.exams-card__acronym {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-navy-deep);
+  margin-bottom: 4px;
+}
+
+.exams-card__name {
+  font-size: 0.75rem;
+  color: var(--color-navy-muted);
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+.exams-card__right {
+  flex: 1;
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.exams-card__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+@media (min-width: 900px) {
+  .exams-card {
+    flex-direction: row;
+  }
+
+  .exams-card__left {
+    width: 25%;
+    border-bottom: none;
+    border-right: 1px solid var(--color-surface-card);
+  }
+
+  .exams-card__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.exams-card__section-title {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-navy-mid);
+  margin-bottom: var(--space-1);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exams-card__section-title i {
+  color: var(--color-accent-prestige);
+}
+
+.exams-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exams-card__list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6875rem;
+  color: var(--color-navy-light);
+  font-weight: 500;
+}
+
+.exams-card__list li i {
+  color: var(--color-accent-utility);
+  font-size: 0.5rem;
+}
+
+.exams-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.exams-card__tag {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-surface-card);
+  border-radius: var(--radius-sm);
+  padding: 4px var(--space-1);
+  font-size: 0.625rem;
+  color: var(--color-navy-light);
+  font-weight: 500;
+}
+
+.exams-card__tag--primary {
+  background-color: var(--color-accent-primary-subtle);
+  border-color: var(--color-accent-primary-border);
+  color: var(--color-accent-primary);
+  font-weight: 700;
+}
+
+.exams-card__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-surface-card);
+}
+
+.exams-card__link {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-utility);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color var(--transition-fast);
+}
+
+.exams-card__link:hover {
+  color: var(--color-navy-deep);
+}
+
+/* ============================================
+   EXAMS BADGE
+   ============================================ */
+
+.exams__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  width: 100%;
+  justify-content: center;
+  border: 1px solid transparent;
+}
+
+.exams__badge--open {
+  background-color: var(--color-accent-prestige-subtle);
+  color: var(--color-accent-prestige);
+  border-color: var(--color-accent-prestige-border);
+}
+
+.exams__badge--waiting {
+  background-color: var(--color-info-subtle);
+  color: var(--color-info);
+  border-color: var(--color-info-border);
+}
+
+.exams__badge--predicted {
+  background-color: var(--color-accent-utility-subtle);
+  color: var(--color-accent-utility);
+  border-color: var(--color-accent-utility-border);
+}
 

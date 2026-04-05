@@ -1,5 +1,5 @@
 
-/* define as propriedades das "fonts" 
+/* define as propriedades do texto para todo o site
 hereditando também variáveis já definidas em variables.css */
 
 body {
@@ -17,3 +17,12 @@ h1, h2, h3, h4 {
 }
 
 h1 { font-size: clamp(2rem, 5vw, 3.75rem); }
+
+.section__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent-primary);
+}

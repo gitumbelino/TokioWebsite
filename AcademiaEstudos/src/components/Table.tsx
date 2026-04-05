@@ -1,4 +1,5 @@
 import type { Subject } from '../types/timetable';
+import TimetableBadge from './badges/TimetableBadge';
 
 interface TableProps {
     subjects: Subject[];
@@ -34,7 +35,7 @@ export default function Table({ subjects }: TableProps) {
                                 return (
                                     <td key={day} className="timetable__cell">
                                         {subject
-                                            ? <span className={`timetable__badge timetable__badge--${subject.color}`}>{subject.name}</span>
+                                            ? <TimetableBadge label={subject.name} color={subject.color} />
                                             : <span className="timetable__empty">—</span>
                                         }
                                     </td>

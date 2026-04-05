@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "acronym": "GNR",
+        "name": "Guarda Nacional Republicana",
+        "badge": "predicted",
+        "badgeLabel": "Previsto Outubro 2024",
+        "requirements": [
+            "18 a 27 anos",
+            "12º Ano completo",
+            "Alt. min: 1.60m(F)/1.65m(M)",
+            "Carta Categoria B"
+        ],
+        "fases": [
+            "Provas Conhecimentos",
+            "Provas Físicas",
+            "Exames Médicos",
+            "Avaliação Psicológica"
+        ],
+        "subjects": [
+            "Língua Portuguesa",
+            "História de Portugal",
+            "Direito Constitucional",
+            "Cultura Geral"
+        ],
+        "url": "https://www.gnr.pt"
+    },
+    {
+        "id": 2,
+        "acronym": "PSP",
+        "name": "Polícia de Segurança Pública",
+        "badge": "waiting",
+        "badgeLabel": "A Aguardar Abertura",
+        "requirements": [
+            "19 a 30 anos",
+            "12º Ano completo",
+            "Alt. min: 1.60m(F)/1.65m(M)",
+            "Sem antec. criminais"
+        ],
+        "fases": [
+            "Prova Cultural",
+            "Provas Físicas",
+            "Inspeção Médica",
+            "Entrevista"
+        ],
+        "subjects": [
+            "Português",
+            "Matemática Básica",
+            "Cidadania",
+            "Atualidades"
+        ],
+        "url": "https://www.psp.pt"
+    },
+    {
+        "id": 3,
+        "acronym": "Exército",
+        "name": "Tropas Especiais",
+        "badge": "open",
+        "badgeLabel": "Inscrições Abertas",
+        "requirements": [
+            "18 a 24 anos",
+            "9º Ano mínimo",
+            "Aptidão física excecional",
+            "Nac. Portuguesa"
+        ],
+        "fases": [
+            "Provas Físicas",
+            "Exames Médicos",
+            "Testes Psicotécnicos",
+            "Entrevista"
+        ],
+        "subjects": [
+            "Condicionamento Físico",
+            "Prep. Psicológica",
+            "Cultura Militar"
+        ],
+        "url": "https://www.exercito.pt"
+    },
+    {
+        "id": 4,
+        "acronym": "Marinha",
+        "name": "Corpo de Fuzileiros",
+        "badge": "predicted",
+        "badgeLabel": "Previsto Nov 2024",
+        "requirements": [
+            "18 a 24 anos",
+            "9º Ano mínimo",
+            "Capacidade Natação",
+            "Robustez Física"
+        ],
+        "fases": [
+            "Provas Natação",
+            "Provas Físicas",
+            "Junta Médica",
+            "Avaliação Psicológica"
+        ],
+        "subjects": [
+            "Técnicas Natação",
+            "Resistência Física",
+            "Testes Psicotécnicos"
+        ],
+        "url": "https://www.marinha.pt"
+    }
+]

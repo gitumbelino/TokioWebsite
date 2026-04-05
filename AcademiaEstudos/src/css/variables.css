@@ -37,6 +37,11 @@ transições.
   --color-accent-utility: #00897B;
   /* teal — links, icons */
 
+  /* INFO — blue, for "waiting/pending" states */
+  --color-info: #1E40AF;
+  --color-info-subtle: #DBEAFE;
+  --color-info-border: #BFDBFE;
+
   /* ACCENT SUBTLE SURFACES — for badges, tags, highlights */
   --color-accent-primary-subtle: #FAE8E3;
   --color-accent-primary-border: #F2B9A8;
@@ -60,6 +65,11 @@ transições.
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
+
+  /* SHADOWS */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
 
   /* TRANSITIONS */
   --transition-fast: 150ms ease;
