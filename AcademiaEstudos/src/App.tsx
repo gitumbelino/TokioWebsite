@@ -11,6 +11,7 @@ import Contacts from './pages/Contacts';
 import methodologyCardsData from './data/methodologyCards.json';
 import timetableData from './data/timetable.json';
 import examsCardsData from './data/examCards.json';
+import coursesCardsData from './data/coursesCard.json';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -23,7 +24,8 @@ function App() {
 
   const [methodologyCards] = useState(methodologyCardsData);
   const [timetable] = useState(timetableData);
-  const [examsData] = useState(examsCardsData)
+  const [examsData] = useState(examsCardsData);
+  const [coursesData] = useState(examsCardsData);
 
   return (
     <>
@@ -33,12 +35,18 @@ function App() {
       <Routes>
         <Route path="*" element={<_404 />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/cursos" element={<Courses />} />
-        <Route path="/metodologia" element={<Methods
-          methodologyCards={methodologyCards}
-          timetable={timetable} />} />
-        <Route path="/exames" element={<Exams 
-        examsData={examsData}
+        <Route path="/cursos" element={<Courses
+          coursesData={coursesData}
+        />} />
+        <Route
+          path="/metodologia"
+          element={
+            <Methods
+              methodologyCards={methodologyCards}
+              timetable={timetable} />}
+        />
+        <Route path="/exames" element={<Exams
+          examsData={examsData}
         />} />
         <Route path="/contacto" element={<Contacts />} />
       </Routes>

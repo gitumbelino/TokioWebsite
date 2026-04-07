@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "img": "policia.jpg",
+        "name": "Curso de Preparação GNR / PSP",
+        "description": "Prepara-te para ingressar nas forças de segurança com um programa focado em legislação, cultura geral, matemática e simulacros reais de exame.",
+        "duration": "8 Meses",
+        "format": "Pós-Laboral",
+        "content": [
+            "Língua Portuguesa — gramática, interpretação e produção de texto",
+            "Legislação — legislação geral e específica das forças de segurança",
+            "Cultura Geral e Actualidade — nacional e internacional",
+            "História de Portugal — do séc. XX à actualidade",
+            "Matemática e Raciocínio Lógico — operações, problemas e psicotécnicos",
+            "Simulacros de exame — condições reais de prova"
+        ],
+        "careers": [
+            "Guarda da Guarda Nacional Republicana (GNR)",
+            "Agente da Polícia de Segurança Pública (PSP)",
+            "Agente da Polícia Municipal",
+            "Guarda Prisional"
+        ]
+    },
+    {
+        "id": 2,
+        "img": "exercito.jpg",
+        "name": "Curso de Preparação para o Exército",
+        "description": "Desenvolve a condição física e os conhecimentos necessários para ingressar no Exército Português, com treino progressivo e simulacros de selecção.",
+        "duration": "6 Meses",
+        "format": "Fim de Semana",
+        "content": [
+            "Condicionamento físico militar — corrida, força e circuitos de obstáculos",
+            "Provas físicas do Exército — 2400m, flexões, abdominais e barra",
+            "Matemática e Raciocínio Lógico — psicotécnicos e problemas aplicados",
+            "Língua Portuguesa — expressão escrita e interpretação de texto",
+            "Cultura geral, cidadania e actualidade nacional e internacional",
+            "Simulacros de selecção — réplica das provas de admissão ao Exército Português"
+        ],
+        "careers": [
+            "Soldado do Exército Português (RC / RV)",
+            "Sargento do Exército Português",
+            "Oficial das Forças Armadas (via Academia Militar)",
+            "Técnico de Manutenção e Logística Militar"
+        ]
+    },
+    {
+        "id": 3,
+        "img": "marinha.jpg",
+        "name": "Curso de Preparação para a Marinha",
+        "description": "Prepara-te para a vida naval com treino aquático, condicionamento físico, matemática e simulacros escritos e físicos em condições reais de selecção.",
+        "duration": "8 Meses",
+        "format": "Pós-Laboral",
+        "content": [
+            "Natação e resistência aquática — técnica, apneia e provas cronometradas",
+            "Condicionamento físico naval — corrida, força e testes de aptidão da Marinha",
+            "Matemática e Ciências — cálculo, física básica e raciocínio lógico",
+            "Língua Portuguesa — gramática e expressão escrita",
+            "Legislação e organização das Forças Armadas e da Marinha Portuguesa",
+            "Simulacros de selecção — provas escritas e físicas em condições reais"
+        ],
+        "careers": [
+            "Marinheiro da Marinha Portuguesa (RC / RV)",
+            "Sargento da Marinha Portuguesa",
+            "Oficial da Marinha (via Escola Naval)",
+            "Técnico de Engenharia e Electrónica Naval"
+        ]
+    },
+    {
+        "id": 4,
+        "img": "fuzileiros.jpg",
+        "name": "Curso de Preparação para Fuzileiros",
+        "description": "Um programa intensivo que forja a resistência física, mental e técnica exigida para ingressar nas forças de elite naval das Forças Armadas Portuguesas.",
+        "duration": "12 Meses",
+        "format": "Regime Intensivo",
+        "content": [
+            "Condicionamento físico de alta intensidade — treino diário progressivo",
+            "Natação e meios aquáticos — técnica, apneia e resistência em água aberta",
+            "Percursos de obstáculos e resistência mental — simulação das selecções reais",
+            "Preparação psicológica — avaliação e reforço do perfil exigido para forças especiais",
+            "Primeiros socorros e segurança em ambiente operacional",
+            "Cultura militar, legislação das Forças Armadas e ética do combatente"
+        ],
+        "careers": [
+            "Fuzileiro da Marinha Portuguesa",
+            "Mergulhador de Combate (CDC)",
+            "Operações Especiais da Marinha",
+            "Forças de Intervenção Rápida das Forças Armadas"
+        ]
+    }
+]

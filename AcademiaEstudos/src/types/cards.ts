@@ -8,7 +8,7 @@ export type MethodologyCard = {
 
 export type BadgeVariant = "open" | "waiting" | "predicted";
 
-export type ExamCard = {    
+export type ExamCard = {
     id: number;
 
     acronym: string;
@@ -19,7 +19,16 @@ export type ExamCard = {
     subjects: string[];
     url: string;
     badgeLabel: string;
-
 };
 
 
+export type CourseCard = {
+    id: number;
+    img: string;
+    name: string;
+    description: string;
+    duration: string;
+    format: string;
+    content: string[];
+    careers: string[];
+}
