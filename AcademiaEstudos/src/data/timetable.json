@@ -2,154 +2,132 @@
   {
     "id": "1",
     "name": "Legislação",
-    "color": "navy",
     "time": "09:00 - 10:30",
     "day": "Segunda"
   },
   {
     "id": "2",
     "name": "Português",
-    "color": "teal",
     "time": "09:00 - 10:30",
     "day": "Terça"
   },
   {
     "id": "3",
     "name": "Legislação",
-    "color": "navy",
     "time": "09:00 - 10:30",
     "day": "Quarta"
   },
   {
     "id": "4",
     "name": "Matemática",
-    "color": "gold",
     "time": "09:00 - 10:30",
     "day": "Quinta"
   },
   {
     "id": "5",
     "name": "Legislação",
-    "color": "navy",
     "time": "09:00 - 10:30",
     "day": "Sexta"
   },
   {
     "id": "6",
     "name": "Simulacro",
-    "color": "ember",
     "time": "09:00 - 10:30",
     "day": "Sábado"
   },
   {
     "id": "7",
     "name": "Português",
-    "color": "teal",
     "time": "10:45 - 12:15",
     "day": "Segunda"
   },
   {
     "id": "8",
     "name": "Legislação",
-    "color": "navy",
     "time": "10:45 - 12:15",
     "day": "Terça"
   },
   {
     "id": "9",
     "name": "Matemática",
-    "color": "gold",
     "time": "10:45 - 12:15",
     "day": "Quarta"
   },
   {
     "id": "10",
     "name": "Legislação",
-    "color": "navy",
     "time": "10:45 - 12:15",
     "day": "Quinta"
   },
   {
     "id": "11",
     "name": "Inglês",
-    "color": "muted",
     "time": "10:45 - 12:15",
     "day": "Sexta"
   },
   {
     "id": "12",
     "name": "Simulacro",
-    "color": "ember",
     "time": "10:45 - 12:15",
     "day": "Sábado"
   },
   {
     "id": "13",
     "name": "Psicotécnicos",
-    "color": "gold",
     "time": "14:00 - 15:30",
     "day": "Segunda"
   },
   {
     "id": "14",
     "name": "Matemática",
-    "color": "gold",
     "time": "14:00 - 15:30",
     "day": "Terça"
   },
   {
     "id": "15",
     "name": "Inglês",
-    "color": "muted",
     "time": "14:00 - 15:30",
     "day": "Quarta"
   },
   {
     "id": "16",
     "name": "Psicotécnicos",
-    "color": "gold",
     "time": "14:00 - 15:30",
     "day": "Quinta"
   },
   {
     "id": "17",
     "name": "Português",
-    "color": "teal",
     "time": "14:00 - 15:30",
     "day": "Sexta"
   },
   {
     "id": "18",
     "name": "Prep. Física",
-    "color": "muted",
     "time": "16:00 - 18:00",
     "day": "Segunda"
   },
   {
     "id": "19",
     "name": "Prep. Física",
-    "color": "muted",
     "time": "16:00 - 18:00",
     "day": "Terça"
   },
   {
     "id": "20",
     "name": "Prep. Física",
-    "color": "muted",
     "time": "16:00 - 18:00",
     "day": "Quarta"
   },
   {
     "id": "21",
     "name": "Prep. Física",
-    "color": "muted",
     "time": "16:00 - 18:00",
     "day": "Quinta"
   },
   {
     "id": "22",
     "name": "Prep. Física",
-    "color": "muted",
     "time": "16:00 - 18:00",
     "day": "Sexta"
   }

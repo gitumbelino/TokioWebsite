@@ -416,37 +416,9 @@ i {
   font-size: 0.8125rem;
   font-weight: 600;
   text-align: center;
-  border: 1px solid transparent;
-}
-
-.timetable__badge--navy {
+  border: 1px solid var(--color-navy-muted);
   background-color: var(--color-surface-card);
   color: var(--color-navy-deep);
-  border-color: var(--color-navy-muted);
-}
-
-.timetable__badge--teal {
-  background-color: var(--color-accent-utility-subtle);
-  color: var(--color-accent-utility);
-  border-color: var(--color-accent-utility-border);
-}
-
-.timetable__badge--gold {
-  background-color: var(--color-accent-prestige-subtle);
-  color: var(--color-accent-prestige);
-  border-color: var(--color-accent-prestige-border);
-}
-
-.timetable__badge--ember {
-  background-color: var(--color-accent-primary-subtle);
-  color: var(--color-accent-primary);
-  border-color: var(--color-accent-primary-border);
-}
-
-.timetable__badge--muted {
-  background-color: var(--color-surface-card);
-  color: var(--color-navy-light);
-  border-color: var(--color-surface-card);
 }
 
 .timetable__empty {
@@ -629,7 +601,7 @@ i {
   margin-bottom: var(--space-1);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--space-1);
 }
 
 .exams-card__section-title i {
@@ -640,16 +612,18 @@ i {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--space-1);
+  padding: var(--space-1);
 }
 
 .exams-card__list li {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--space-1);
   font-size: 0.6875rem;
   color: var(--color-navy-light);
   font-weight: 500;
+
 }
 
 .exams-card__list li i {
@@ -660,24 +634,19 @@ i {
 .exams-card__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: var(--space-1);
+  padding: var(--space-1);
 }
 
 .exams-card__tag {
-  background-color: var(--color-surface-subtle);
-  border: 1px solid var(--color-surface-card);
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-navy-light);
   border-radius: var(--radius-sm);
   padding: 4px var(--space-1);
   font-size: 0.625rem;
-  color: var(--color-navy-light);
+  color: var(--color-navy-deep);
   font-weight: 500;
-}
-
-.exams-card__tag--primary {
-  background-color: var(--color-accent-primary-subtle);
-  border-color: var(--color-accent-primary-border);
-  color: var(--color-accent-primary);
-  font-weight: 700;
+  
 }
 
 .exams-card__footer {
@@ -692,11 +661,11 @@ i {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-accent-utility);
+  color: var(  --color-navy-light);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--space-1);
   transition: color var(--transition-fast);
 }
 
@@ -711,7 +680,7 @@ i {
 .exams__badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--space-1);
   padding: 6px var(--space-2);
   border-radius: var(--radius-sm);
   font-size: 0.625rem;
@@ -720,24 +689,8 @@ i {
   letter-spacing: 0.08em;
   width: 100%;
   justify-content: center;
-  border: 1px solid transparent;
-}
-
-.exams__badge--open {
-  background-color: var(--color-accent-prestige-subtle);
-  color: var(--color-accent-prestige);
-  border-color: var(--color-accent-prestige-border);
-}
-
-.exams__badge--waiting {
-  background-color: var(--color-info-subtle);
-  color: var(--color-info);
-  border-color: var(--color-info-border);
-}
-
-.exams__badge--predicted {
-  background-color: var(--color-accent-utility-subtle);
-  color: var(--color-accent-utility);
-  border-color: var(--color-accent-utility-border);
+  border: 1px solid var(--color-navy-deep);
+  background-color: var(--color-surface-card);
+  color: var(--color-navy-deep);
 }
 

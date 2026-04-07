@@ -7,8 +7,19 @@ interface TableProps {
 
 export default function Table({ subjects }: TableProps) {
 
-    const times = ["09:00 - 10:30", "10:45 - 12:15", "14:00 - 15:30", "16:00 - 18:00"];
-    const days = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+    const times = [
+        "09:00 - 10:30",
+        "10:45 - 12:15",
+        "14:00 - 15:30",
+        "16:00 - 18:00"];
+
+    const days = [
+        "Segunda",
+        "Terça",
+        "Quarta",
+        "Quinta",
+        "Sexta",
+        "Sábado"];
 
     return (
         <div className="timetable__wrapper">
@@ -35,7 +46,7 @@ export default function Table({ subjects }: TableProps) {
                                 return (
                                     <td key={day} className="timetable__cell">
                                         {subject
-                                            ? <TimetableBadge label={subject.name} color={subject.color} />
+                                            ? <TimetableBadge label={subject.name} />
                                             : <span className="timetable__empty">—</span>
                                         }
                                     </td>

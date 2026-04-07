@@ -48,7 +48,7 @@ export default function ExamsCard({ exam }: ExamsCardProps) {
                         </h4>
                         <div className="exams-card__tags">
                             {exam.subjects.map((subject, index) => (
-                                <span key={index} className="exams-card__tag exams-card__tag--primary">{subject}</span>
+                                <span key={index} className="exams-card__tag">{subject}</span>
                             ))}
                         </div>
                     </div>

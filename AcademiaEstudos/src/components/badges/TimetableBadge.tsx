@@ -1,12 +1,11 @@
 interface TimetableBadgeProps {
   label: string;
-  color: string;
 }
 
-export default function TimetableBadge({ label, color }: TimetableBadgeProps) {
+export default function TimetableBadge({ label }: TimetableBadgeProps) {
   return (
-    <span className={`timetable__badge timetable__badge--${color}`}>
+    <span className="timetable__badge">
       {label}
     </span>
-  )
+  );
 }
