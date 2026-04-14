@@ -1,70 +1,62 @@
 import type { CourseCard } from "../../types/cards";
 
-
 interface CoursesCardProps {
     course: CourseCard;
 }
 
 export default function CourseCard({ course }: CoursesCardProps) {
-
     return (
+        <div className="courses-card">
 
-        // card
-        <div >
-            <div >
+            {/* IMAGE --- 1/4 */}
+            <div className="courses-card__image">
+                <img src={course.img} alt={course.name} />
+            </div>
 
-                {/* 1/4 --------------- */}
+            {/* LEFT PANEL --- 1/4 */}
+            <div className="courses-card__left">
                 <div>
-                    <img src="" alt="" />
+                    <h2 className="courses-card__name">{course.name}</h2>
+                    <p className="courses-card__description">{course.description}</p>
+                </div>
+                <div className="courses-card__footer">
+                    <span className="courses-card__duration">{course.duration}</span>
+                    <span className="courses-card__format">{course.format}</span>
+                </div>
+            </div>
+
+            {/* RIGHT PANEL --- 2/4 */}
+            <div className="courses-card__right">
+
+                {/* Content */}
+                <div className="courses-card__section">
+                    <h4 className="courses-card__section-title">
+                        <i className="fa-solid fa-book"></i> Conteúdo do Curso
+                    </h4>
+                    <ul className="courses-card__list">
+                        {course.content.map((item, index) => (
+                            <li key={index}>
+                                <i className="fa-solid fa-check"></i> {item}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
 
-                {/* 2/4 --------------- */}
-                <div className="exams-card__left">
-                    {/* header and body------------------ */}
-                    <div>
-                        <h2 className="exams-card__acronym">
-                            {course.name}</h2>
-                        <p className="exams-card__name">
-                            {course.description}</p>
-                    </div>
-                    {/* footer------------------ */}
-                    <div>
-                        <span>{course.duration}</span>
-                        <a href="#" className="exams-card__details">
-                            Details
-                        </a>
-                    </div>
+                {/* Careers */}
+                <div className="courses-card__section">
+                    <h4 className="courses-card__section-title">
+                        <i className="fa-solid fa-crosshairs"></i> Saídas Profissionais
+                    </h4>
+                    <ul className="courses-card__list courses-card__list--careers">
+                        {course.careers.map((item, index) => (
+                            <li key={index}>
+                                <i className="fa-solid fa-chevron-right"></i> {item}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
 
-                {/* 3/4------------------ */}
-                <div>
-                    <div>
-
-                        <h4>
-                            <i className="fa-solid fa-clipboard-list">
-                            </i>
-                            Conteúdo do Curso
-                        </h4>
-                        <ul className="exams-card__list">
-                            {course.content.map((content, index) => (
-                                <li key={index}>
-                                    <i className="fa-solid fa-check"></i> {content}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-                {/* 3/4------------------ */}
-                <div>
-                    <div>
-                        <h4><i className="fa-solid fa-clipboard-list"></i> Saídas Profissionais</h4>
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     );
-
 }

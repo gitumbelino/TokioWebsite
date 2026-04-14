@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import './../css/components.css'
 import NavbarButton from './buttons/NavbarButton'
 import HamburguerButton from './buttons/HamburguerButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

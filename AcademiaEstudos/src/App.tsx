@@ -25,7 +25,7 @@ function App() {
   const [methodologyCards] = useState(methodologyCardsData);
   const [timetable] = useState(timetableData);
   const [examsData] = useState(examsCardsData);
-  const [coursesData] = useState(examsCardsData);
+  const [coursesData] = useState(coursesCardsData);
 
   return (
     <>

@@ -1,0 +1,50 @@
+.btn--primary {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-bright);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.btn--primary:hover {
+  background-color: #c94f30;
+}
+
+.btn--cta-filled,
+.btn--cta-outline {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.btn--cta-filled {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-bright);
+  border: 2px solid transparent;
+}
+
+.btn--cta-filled:hover {
+  background-color: #c94d2e;
+}
+
+.btn--cta-outline {
+  background-color: transparent;
+  color: var(--color-navy-muted);
+  border: 2px solid var(--color-navy-muted);
+}
+
+.btn--cta-outline:hover {
+  color: var(--color-text-bright);
+  border-color: var(--color-text-bright);
+}

@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "name": "Curso de Preparação GNR / PSP",
+    "tagline": "Foco na prova escrita e legislação",
+    "badge": "Presencial",
+    "duration": "8 Meses",
+    "format": "Pós-Laboral",
+    "content": [
+      "Língua Portuguesa — gramática, interpretação e produção de texto",
+      "Legislação — legislação geral e específica das forças de segurança",
+      "Cultura Geral e Actualidade — nacional e internacional",
+      "História de Portugal — do séc. XX à actualidade",
+      "Matemática e Raciocínio Lógico — operações, problemas e psicotécnicos",
+      "Simulacros de exame — condições reais de prova"
+    ],
+    "careers": [
+      "Guarda da Guarda Nacional Republicana (GNR)",
+      "Agente da Polícia de Segurança Pública (PSP)",
+      "Agente da Polícia Municipal",
+      "Guarda Prisional"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Curso de Preparação Física",
+    "tagline": "Supera os teus limites físicos",
+    "badge": "Presencial",
+    "duration": "6 Meses",
+    "format": "Fim de Semana",
+    "content": [
+      "Corrida de resistência — preparação para os testes de 1000m, 2400m e Cooper",
+      "Força e musculação — flexões, abdominais e barra segundo os protocolos oficiais",
+      "Velocidade e agilidade — 50m, percursos de obstáculos e coordenação motora",
+      "Natação — técnica e resistência para candidatos a Marinha e Fuzileiros",
+      "Preparação psicológica — gestão de stress, foco e resiliência em prova",
+      "Avaliação mensal — testes de controlo com os critérios reais de cada concurso"
+    ],
+    "careers": [
+      "Guarda da Guarda Nacional Republicana (GNR)",
+      "Agente da Polícia de Segurança Pública (PSP)",
+      "Soldado do Exército Português",
+      "Marinheiro e Fuzileiro da Marinha Portuguesa",
+      "Bombeiro Sapador"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Curso de Preparação para Fuzileiros / Tropas",
+    "tagline": "Preparação para forças especiais",
+    "badge": "Imersivo",
+    "duration": "12 Meses",
+    "format": "Regime de Internato",
+    "content": [
+      "Condicionamento físico extremo — treino diário de alta intensidade",
+      "Natação e meios aquáticos — técnica, apneia e resistência em água",
+      "Resistência mental e gestão de pressão — simulação de condições de selecção",
+      "Preparação psicológica — avaliação e reforço do perfil psicológico exigido",
+      "Cultura militar e legislação das Forças Armadas",
+      "Primeiros socorros e segurança em ambiente operacional"
+    ],
+    "careers": [
+      "Fuzileiro da Marinha Portuguesa",
+      "Comandos e Pára-quedistas do Exército",
+      "Operações Especiais das Forças Armadas",
+      "Forças de Intervenção da GNR (GOE / GIOE)"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Curso Intensivo de Preparação",
+    "tagline": "Aceleração total de resultados",
+    "badge": "Intensivo",
+    "duration": "3 Meses",
+    "format": "Full-time",
+    "content": [
+      "Todas as componentes teóricas — Português, Legislação, Cultura Geral e Matemática",
+      "Preparação física completa — resistência, força, velocidade e natação",
+      "Psicotécnicos — raciocínio abstracto, numérico, verbal e espacial",
+      "Preparação para entrevista profissional — postura, argumentação e apresentação",
+      "Simulacros completos semanais — réplica integral das provas de selecção",
+      "Acompanhamento individual diário — plano personalizado por instrutor"
+    ],
+    "careers": [
+      "GNR, PSP, Polícia Municipal",
+      "Exército, Marinha e Força Aérea Portuguesa",
+      "Fuzileiros e Tropas Especiais",
+      "Qualquer concurso público de segurança e defesa nacional"
+    ]
+  }
+]

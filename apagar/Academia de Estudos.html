@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia de Estudos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0C1B2E',
+                        secondary: '#1A3354',
+                        accent: '#E05B3A',
+                        text: '#8BAFC8',
+                        white: '#FFFFFF',
+                        light: '#F5F7FA'
+                    },
+                    fontFamily: {
+                        barlow: ['Barlow', 'sans-serif'],
+                        condensed: ['Barlow Condensed', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Barlow', sans-serif;
+            background-color: #F5F7FA;
+            color: #0C1B2E;
+        }
+        h1, h2, h3, h4, h5, h6, .font-condensed {
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+        /* Mobile menu toggle */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="w-full min-h-screen flex flex-col m-0 p-0 antialiased">
+
+    <!-- Navigation -->
+    <nav id="header" class="bg-primary border-b border-secondary h-16 w-full fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center cursor-pointer">
+                <span class="font-condensed font-bold text-2xl tracking-wider text-white">ACADEMIA</span>
+                <span class="font-condensed font-bold text-2xl tracking-wider text-accent ml-2">DE ESTUDOS</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-text hover:text-white font-medium text-[12px] uppercase tracking-wider transition-colors">Início</a>
+                <a href="#" class="text-text hover:text-white font-medium text-[12px] uppercase tracking-wider transition-colors">Metodologia</a>
+                <a href="#" class="text-text hover:text-white font-medium text-[12px] uppercase tracking-wider transition-colors">Exames</a>
+                <a href="#" class="text-text hover:text-white font-medium text-[12px] uppercase tracking-wider transition-colors">Cursos</a>
+                <a href="#" class="text-text hover:text-white font-medium text-[12px] uppercase tracking-wider transition-colors">Contacto</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center">
+                <a href="#" class="bg-accent hover:bg-[#c94d2e] text-white font-medium text-sm px-6 py-2 rounded-[4px] transition-colors uppercase tracking-wide">
+                    Inscrever
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-text hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-primary border-b border-secondary w-full absolute top-16 left-0 shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#" class="block px-3 py-2 text-text hover:text-white hover:bg-secondary rounded-md font-medium text-sm uppercase tracking-wider">Início</a>
+                <a href="#" class="block px-3 py-2 text-text hover:text-white hover:bg-secondary rounded-md font-medium text-sm uppercase tracking-wider">Metodologia</a>
+                <a href="#" class="block px-3 py-2 text-text hover:text-white hover:bg-secondary rounded-md font-medium text-sm uppercase tracking-wider">Exames</a>
+                <a href="#" class="block px-3 py-2 text-text hover:text-white hover:bg-secondary rounded-md font-medium text-sm uppercase tracking-wider">Cursos</a>
+                <a href="#" class="block px-3 py-2 text-text hover:text-white hover:bg-secondary rounded-md font-medium text-sm uppercase tracking-wider">Contacto</a>
+                <a href="#" class="block px-3 py-2 mt-4 text-center bg-accent text-white rounded-[4px] font-medium text-sm uppercase tracking-wide">Inscrever</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow pt-16 flex flex-col">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="relative bg-primary w-full min-h-[80vh] flex items-center border-b border-secondary overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 py-16 lg:py-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <span class="inline-block py-1 px-3 rounded-sm bg-secondary text-text font-bold text-xs uppercase tracking-widest mb-6 border border-secondary">
+                            Excelência Comprovada
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-condensed font-bold text-white leading-tight mb-6 uppercase">
+                            Preparação Rigorosa Para <span class="text-accent">Concursos Públicos</span>
+                        </h1>
+                        <p class="text-lg text-text mb-8 max-w-2xl mx-auto lg:mx-0 font-medium">
+                            Metodologia militar aplicada ao ensino civil. Disciplina, foco e resultados estruturados para garantir o seu sucesso nos exames mais exigentes.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#" class="bg-accent hover:bg-[#c94d2e] text-white font-bold px-8 py-4 rounded-[4px] transition-colors uppercase tracking-wider text-center">
+                                Iniciar Preparação
+                            </a>
+                            <a href="#" class="bg-transparent border-2 border-text text-text hover:border-white hover:text-white font-bold px-8 py-4 rounded-[4px] transition-colors uppercase tracking-wider text-center">
+                                Ver Metodologia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block relative">
+                        <div class="absolute inset-0 bg-accent transform translate-x-4 translate-y-4 rounded-[4px]"></div>
+                        <div class="relative bg-secondary border border-text p-2 rounded-[4px] overflow-hidden h-[500px]">
+                            <img class="w-full h-full object-cover rounded-[2px] grayscale opacity-80" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0ea3d26e58-3bc936dc3219723525fe.png" alt="students studying intensely in a structured modern classroom, military discipline style, professional lighting" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white w-full border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-condensed font-bold text-primary uppercase mb-4">Os Nossos Pilares</h2>
+                    <div class="w-24 h-1 bg-accent mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-light p-8 border border-gray-200 rounded-[4px] hover:border-accent transition-colors group">
+                        <div class="w-16 h-16 bg-primary text-white flex items-center justify-center rounded-[4px] mb-6 group-hover:bg-accent transition-colors">
+                            <i class="fa-solid fa-bullseye text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-condensed font-bold text-primary uppercase mb-3">Foco Absoluto</h3>
+                        <p class="text-gray-600 font-medium leading-relaxed">
+                            Ambiente livre de distrações com rotinas de estudo rigorosas. Maximizamos a retenção de conhecimento através de métodos imersivos.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-light p-8 border border-gray-200 rounded-[4px] hover:border-accent transition-colors group">
+                        <div class="w-16 h-16 bg-primary text-white flex items-center justify-center rounded-[4px] mb-6 group-hover:bg-accent transition-colors">
+                            <i class="fa-solid fa-shield-halved text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-condensed font-bold text-primary uppercase mb-3">Disciplina Estruturada</h3>
+                        <p class="text-gray-600 font-medium leading-relaxed">
+                            Cronogramas milimétricos e acompanhamento constante. A disciplina é a ponte entre os seus objetivos e as suas conquistas.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-light p-8 border border-gray-200 rounded-[4px] hover:border-accent transition-colors group">
+                        <div class="w-16 h-16 bg-primary text-white flex items-center justify-center rounded-[4px] mb-6 group-hover:bg-accent transition-colors">
+                            <i class="fa-solid fa-ranking-star text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-condensed font-bold text-primary uppercase mb-3">Resultados Táticos</h3>
+                        <p class="text-gray-600 font-medium leading-relaxed">
+                            Simulações reais de exames e análise de métricas de desempenho para ajustes táticos na sua preparação.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats/Content Section -->
+        <section id="stats" class="py-20 bg-light w-full border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-condensed font-bold text-primary uppercase mb-6">A Nossa Missão é a Sua Aprovação</h2>
+                        <p class="text-gray-600 font-medium mb-8 leading-relaxed">
+                            Na Academia de Estudos, não acreditamos em sorte. Acreditamos em preparação exaustiva, estratégia e execução impecável. Os nossos instrutores são especialistas em decifrar a lógica dos concursos públicos, preparando os candidatos não apenas academicamente, mas mentalmente para o desafio.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="border-l-4 border-accent pl-4">
+                                <span class="block text-3xl font-condensed font-bold text-primary">94%</span>
+                                <span class="text-sm font-bold text-gray-500 uppercase tracking-wider">Taxa de Aprovação</span>
+                            </div>
+                            <div class="border-l-4 border-accent pl-4">
+                                <span class="block text-3xl font-condensed font-bold text-primary">+5000</span>
+                                <span class="text-sm font-bold text-gray-500 uppercase tracking-wider">Alunos Colocados</span>
+                            </div>
+                            <div class="border-l-4 border-accent pl-4">
+                                <span class="block text-3xl font-condensed font-bold text-primary">15</span>
+                                <span class="text-sm font-bold text-gray-500 uppercase tracking-wider">Anos de Experiência</span>
+                            </div>
+                            <div class="border-l-4 border-accent pl-4">
+                                <span class="block text-3xl font-condensed font-bold text-primary">24/7</span>
+                                <span class="text-sm font-bold text-gray-500 uppercase tracking-wider">Suporte Tático</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="h-48 bg-primary rounded-[4px] overflow-hidden">
+                                <img class="w-full h-full object-cover grayscale opacity-70" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2e901bb283-64ff14d62787014176db.png" alt="student writing exam paper close up" />
+                            </div>
+                            <div class="h-64 bg-secondary rounded-[4px] overflow-hidden">
+                                <img class="w-full h-full object-cover grayscale opacity-70" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5871bb8c12-1628824fef056b48a97c.png" alt="instructor pointing at whiteboard with complex diagrams" />
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="h-64 bg-secondary rounded-[4px] overflow-hidden">
+                                <img class="w-full h-full object-cover grayscale opacity-70" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/84dbde182b-b30e233d80621c43d230.png" alt="group of focused students in lecture hall" />
+                            </div>
+                            <div class="h-48 bg-accent rounded-[4px] flex items-center justify-center p-6 text-center">
+                                <p class="text-white font-condensed font-bold text-xl uppercase tracking-wider">"A preparação precede o triunfo."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-20 bg-white w-full border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-condensed font-bold text-primary uppercase mb-4">Programas de Formação</h2>
+                        <div class="w-24 h-1 bg-accent"></div>
+                    </div>
+                    <a href="#" class="mt-6 md:mt-0 text-primary font-bold hover:text-accent transition-colors uppercase tracking-wider text-sm flex items-center">
+                        Ver Todos os Cursos <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Course Card 1 -->
+                    <div class="bg-white border border-gray-200 rounded-[4px] overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-primary relative">
+                            <img class="w-full h-full object-cover opacity-50 grayscale" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2f80c6376d-9a1c5b792688c4930f05.png" alt="police or military academy training" />
+                            <div class="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-2 py-1 rounded-[2px] uppercase">
+                                Forças de Segurança
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-lg font-condensed font-bold text-primary uppercase mb-2">Oficiais da PSP</h3>
+                            <p class="text-gray-500 text-sm mb-4 flex-grow">Preparação intensiva para as provas teóricas, físicas e psicotécnicas.</p>
+                            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                                <span class="text-primary font-bold">12 Meses</span>
+                                <a href="#" class="text-accent hover:text-primary font-bold text-sm uppercase"><i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 2 -->
+                    <div class="bg-white border border-gray-200 rounded-[4px] overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-primary relative">
+                            <img class="w-full h-full object-cover opacity-50 grayscale" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/469d98b299-9788898dc233bce3c315.png" alt="legal scales of justice or law books" />
+                            <div class="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-2 py-1 rounded-[2px] uppercase">
+                                Justiça
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-lg font-condensed font-bold text-primary uppercase mb-2">Magistratura</h3>
+                            <p class="text-gray-500 text-sm mb-4 flex-grow">Curso estruturado para o Centro de Estudos Judiciários (CEJ).</p>
+                            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                                <span class="text-primary font-bold">18 Meses</span>
+                                <a href="#" class="text-accent hover:text-primary font-bold text-sm uppercase"><i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 3 -->
+                    <div class="bg-white border border-gray-200 rounded-[4px] overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-primary relative">
+                            <img class="w-full h-full object-cover opacity-50 grayscale" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/574e52cc80-c613da4bf1bb0d76626d.png" alt="diplomat or international relations meeting" />
+                            <div class="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-2 py-1 rounded-[2px] uppercase">
+                                Diplomacia
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-lg font-condensed font-bold text-primary uppercase mb-2">Carreira Diplomática</h3>
+                            <p class="text-gray-500 text-sm mb-4 flex-grow">Foco em relações internacionais, direito e simulações de entrevistas.</p>
+                            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                                <span class="text-primary font-bold">15 Meses</span>
+                                <a href="#" class="text-accent hover:text-primary font-bold text-sm uppercase"><i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 4 -->
+                    <div class="bg-white border border-gray-200 rounded-[4px] overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-primary relative">
+                            <img class="w-full h-full object-cover opacity-50 grayscale" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/9e4f6862f1-db7c9bc17554736b9cd3.png" alt="tax documents or financial graphs" />
+                            <div class="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-2 py-1 rounded-[2px] uppercase">
+                                Finanças
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-lg font-condensed font-bold text-primary uppercase mb-2">Inspetor Tributário</h3>
+                            <p class="text-gray-500 text-sm mb-4 flex-grow">Preparação técnica em fiscalidade, contabilidade e direito administrativo.</p>
+                            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                                <span class="text-primary font-bold">10 Meses</span>
+                                <a href="#" class="text-accent hover:text-primary font-bold text-sm uppercase"><i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="py-24 bg-primary relative overflow-hidden border-b border-secondary">
+            <div class="absolute inset-0 opacity-5" style="background-image: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png');"></div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h2 class="text-3xl md:text-5xl font-condensed font-bold text-white uppercase mb-6">Pronto Para Assumir o Controlo do Seu Futuro?</h2>
+                <p class="text-text text-lg mb-10 max-w-2xl mx-auto font-medium">
+                    As inscrições para a próxima turma estão abertas. Vagas limitadas para garantir o acompanhamento rigoroso que nos caracteriza.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+                    <input type="email" placeholder="O SEU ENDEREÇO DE EMAIL" class="bg-secondary border border-text text-white px-6 py-4 rounded-[4px] focus:outline-none focus:border-accent w-full sm:w-2/3 font-medium placeholder-text uppercase text-sm tracking-wider">
+                    <button type="submit" class="bg-accent hover:bg-[#c94d2e] text-white font-bold px-8 py-4 rounded-[4px] transition-colors uppercase tracking-wider w-full sm:w-1/3">
+                        Avançar
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-primary border-t border-secondary w-full pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <!-- Column 1: Brand -->
+                <div class="flex flex-col">
+                    <div class="flex-shrink-0 flex items-center mb-6">
+                        <span class="font-condensed font-bold text-2xl tracking-wider text-white">ACADEMIA</span>
+                        <span class="font-condensed font-bold text-2xl tracking-wider text-accent ml-2">DE ESTUDOS</span>
+                    </div>
+                    <p class="text-text font-medium mb-8 max-w-xs leading-relaxed">
+                        Preparação rigorosa para concursos públicos.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 border border-text rounded-[4px] flex items-center justify-center text-text hover:text-white hover:border-white transition-colors">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-text rounded-[4px] flex items-center justify-center text-text hover:text-white hover:border-white transition-colors">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-text rounded-[4px] flex items-center justify-center text-text hover:text-white hover:border-white transition-colors">
+                            <i class="fa-brands fa-youtube text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-text rounded-[4px] flex items-center justify-center text-text hover:text-white hover:border-white transition-colors">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Navigation -->
+                <div class="flex flex-col">
+                    <h4 class="font-condensed font-bold text-xl text-accent uppercase tracking-wider mb-6">Navegação</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-text hover:text-white font-medium transition-colors uppercase text-sm tracking-wider">Início</a></li>
+                        <li><a href="#" class="text-text hover:text-white font-medium transition-colors uppercase text-sm tracking-wider">Metodologia</a></li>
+                        <li><a href="#" class="text-text hover:text-white font-medium transition-colors uppercase text-sm tracking-wider">Exames Anteriores</a></li>
+                        <li><a href="#" class="text-text hover:text-white font-medium transition-colors uppercase text-sm tracking-wider">Cursos Disponíveis</a></li>
+                        <li><a href="#" class="text-text hover:text-white font-medium transition-colors uppercase text-sm tracking-wider">Corpo Docente</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="flex flex-col">
+                    <h4 class="font-condensed font-bold text-xl text-accent uppercase tracking-wider mb-6">Contacto</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-text mt-1 mr-3 w-4 text-center"></i>
+                            <span class="text-text font-medium">Av. das Forças Armadas, 12<br>1600-081 Lisboa, Portugal</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope text-text mr-3 w-4 text-center"></i>
+                            <a href="mailto:info@academiadeestudos.pt" class="text-text hover:text-white font-medium transition-colors">info@academiadeestudos.pt</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone text-text mr-3 w-4 text-center"></i>
+                            <a href="tel:+351210000000" class="text-text hover:text-white font-medium transition-colors">+351 210 000 000</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-secondary flex flex-col md:flex-row justify-between items-center">
+                <p class="text-text text-sm font-medium mb-4 md:mb-0">
+                    &copy; 2023 Academia de Estudos. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-text hover:text-white text-sm font-medium transition-colors">Política de Privacidade</a>
+                    <a href="#" class="text-text hover:text-white text-sm font-medium transition-colors">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia de Estudos — Project Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-deep:    #0C1B2E;
+    --navy-mid:     #1A3354;
+    --navy-light:   #3B6080;
+    --navy-muted:   #8BAFC8;
+    --surface-base: #FFFFFF;
+    --surface-card: #EAEFF4;
+    --surface-subtle:#F6F8FA;
+    --text-base:    #1E1E1E;
+    --accent-ember: #E05B3A;
+    --accent-gold:  #C8A84B;
+    --accent-teal:  #00897B;
+    --font-head: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+  }
+
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--surface-subtle);
+    color: var(--text-base);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--navy-deep);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--navy-mid);
+  }
+  .nav-brand {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 0;
+    margin-right: 32px;
+    white-space: nowrap;
+  }
+  .nav-brand span { color: var(--accent-ember); }
+  nav a {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--navy-muted);
+    text-decoration: none;
+    padding: 18px 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color 0.15s;
+    white-space: nowrap;
+  }
+  nav a:hover { color: #fff; }
+
+  /* HERO */
+  .hero {
+    background: var(--navy-deep);
+    padding: 64px 40px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: 'AE';
+    position: absolute;
+    right: -20px;
+    top: -30px;
+    font-family: var(--font-head);
+    font-size: 280px;
+    font-weight: 800;
+    color: var(--navy-mid);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-head);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-ember);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-size: 56px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.0;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .hero-sub {
+    font-size: 16px;
+    color: var(--navy-muted);
+    max-width: 560px;
+    margin-bottom: 32px;
+  }
+  .keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .kw {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border: 1px solid var(--navy-light);
+    color: var(--navy-muted);
+    border-radius: 3px;
+  }
+  .kw.primary {
+    background: var(--accent-ember);
+    border-color: var(--accent-ember);
+    color: #fff;
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  section {
+    padding: 48px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-ember);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: var(--font-head);
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--navy-deep);
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--surface-card);
+  }
+
+  /* BRAND BLOCK */
+  .statement-box {
+    background: var(--navy-deep);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+  }
+  .statement-box p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .statement-box strong { color: var(--accent-ember); font-weight: 600; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+
+  .card {
+    background: var(--surface-base);
+    border-radius: 8px;
+    padding: 18px 20px;
+    border: 1px solid var(--surface-card);
+  }
+  .card-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--navy-muted);
+    margin-bottom: 6px;
+  }
+  .card-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy-deep);
+    margin-bottom: 4px;
+  }
+  .card-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .never-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .never-tag {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 4px;
+    background: #fef2f0;
+    color: #c0392b;
+    border: 1px solid #f5c6c0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* SPECTRUM */
+  .spectrum-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .spectrum-item { }
+  .spectrum-ends {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 6px;
+  }
+  .spectrum-track {
+    height: 4px;
+    background: var(--surface-card);
+    border-radius: 2px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .spectrum-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--navy-mid);
+  }
+  .spectrum-dot {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent-ember);
+    border: 2px solid var(--surface-base);
+    box-shadow: 0 0 0 1px var(--accent-ember);
+  }
+  .spectrum-name { font-size: 12px; font-weight: 600; color: var(--navy-deep); }
+
+  /* COLOUR */
+  .swatch-row { display: flex; gap: 10px; margin-bottom: 10px; }
+  .swatch {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.12s;
+  }
+  .swatch:hover { transform: translateY(-2px); }
+  .swatch-color { height: 60px; }
+  .swatch-info {
+    padding: 8px 10px 10px;
+    background: var(--surface-base);
+    border-top: 1px solid var(--surface-card);
+  }
+  .swatch-name { font-size: 12px; font-weight: 600; color: var(--navy-deep); margin-bottom: 1px; }
+  .swatch-hex { font-size: 11px; font-family: monospace; color: #888; }
+  .swatch-role { font-size: 10px; color: #aaa; margin-top: 3px; line-height: 1.4; }
+
+  .accent-group {
+    background: var(--navy-deep);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+  }
+  .accent-swatch { flex: 1; }
+  .accent-color { height: 52px; border-radius: 6px; margin-bottom: 10px; }
+  .accent-name { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+  .accent-hex { font-size: 11px; font-family: monospace; color: var(--navy-muted); }
+  .accent-tag { font-size: 10px; color: var(--navy-muted); margin-top: 4px; }
+
+  /* TYPOGRAPHY */
+  .type-demo {
+    background: var(--navy-deep);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 14px;
+  }
+  .type-row {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--navy-mid);
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta {
+    width: 160px;
+    flex-shrink: 0;
+    font-size: 10px;
+    color: var(--navy-muted);
+    line-height: 1.5;
+    font-family: monospace;
+  }
+  .type-specimen { color: #fff; line-height: 1.1; }
+
+  .type-light {
+    background: var(--surface-base);
+    border: 1px solid var(--surface-card);
+    border-radius: 8px;
+    padding: 32px;
+  }
+  .type-row-light {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--surface-card);
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
+  .type-row-light:last-child { border-bottom: none; }
+  .type-meta-light {
+    width: 160px;
+    flex-shrink: 0;
+    font-size: 10px;
+    color: #aaa;
+    line-height: 1.5;
+    font-family: monospace;
+  }
+  .type-specimen-light { color: var(--navy-deep); }
+
+  /* MOODBOARD CONTENT */
+  .frame-block {
+    background: var(--surface-base);
+    border-radius: 10px;
+    border: 1px solid var(--surface-card);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .frame-header {
+    background: var(--navy-mid);
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .frame-num {
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--navy-muted);
+    background: var(--navy-deep);
+    padding: 3px 9px;
+    border-radius: 4px;
+  }
+  .frame-name {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+  }
+  .frame-body { padding: 22px 24px; }
+  .frame-item {
+    font-size: 13px;
+    color: var(--text-base);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--surface-card);
+    display: flex;
+    gap: 10px;
+    line-height: 1.5;
+  }
+  .frame-item:last-child { border-bottom: none; }
+  .fi-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--accent-ember);
+    width: 80px;
+    flex-shrink: 0;
+    padding-top: 1px;
+  }
+  .fi-note {
+    font-size: 11px;
+    color: #999;
+    margin-top: 2px;
+  }
+
+  /* CSS VARIABLES */
+  pre {
+    background: #0f1923;
+    border-radius: 8px;
+    padding: 28px 32px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #a8c4d8;
+    border: 1px solid var(--navy-mid);
+  }
+  .c-comment { color: #3B6080; }
+  .c-var { color: #8BAFC8; }
+  .c-val-navy { color: #5b9bd5; }
+  .c-val-neutral { color: #a0b4c0; }
+  .c-val-ember { color: #e07a5f; }
+  .c-val-gold { color: #c8a84b; }
+  .c-val-teal { color: #00897b; }
+  .c-selector { color: #fff; }
+  .c-prop { color: #8BAFC8; }
+
+  /* TIMELINE */
+  .timeline { margin-top: 8px; }
+  .tl-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 8px;
+    align-items: flex-start;
+  }
+  .tl-days {
+    font-family: var(--font-head);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-ember);
+    width: 70px;
+    flex-shrink: 0;
+    padding-top: 12px;
+  }
+  .tl-card {
+    flex: 1;
+    background: var(--surface-base);
+    border-radius: 6px;
+    padding: 12px 16px;
+    border: 1px solid var(--surface-card);
+    border-left: 3px solid var(--surface-card);
+  }
+  .tl-card.active { border-left-color: var(--accent-ember); }
+  .tl-card.done { border-left-color: var(--accent-teal); }
+  .tl-phase { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: #999; margin-bottom: 3px; }
+  .tl-task { font-size: 13px; color: var(--navy-deep); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy-deep);
+    padding: 32px 40px;
+    text-align: center;
+  }
+  footer p { font-size: 12px; color: var(--navy-muted); }
+  footer strong { color: #fff; }
+
+  /* DIVIDER */
+  hr { border: none; border-top: 1px solid var(--surface-card); margin: 0; }
+
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--navy-deep);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    font-family: var(--font-body);
+  }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Academia <span>de Estudos</span></div>
+  <a href="#brand">Brand</a>
+  <a href="#colour">Colour</a>
+  <a href="#typography">Typography</a>
+  <a href="#moodboard">Moodboard</a>
+  <a href="#variables">CSS</a>
+  <a href="#timeline">Timeline</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Projecto Final · Brief Completo</div>
+  <h1>Academia<br>de Estudos</h1>
+  <p class="hero-sub">Design brief, sistema visual, tokens CSS e conteúdo do moodboard — tudo o que é necessário para avançar para o desenvolvimento.</p>
+  <div class="keywords">
+    <span class="kw primary">Rigor</span>
+    <span class="kw primary">Método</span>
+    <span class="kw primary">Ambição</span>
+    <span class="kw">Autoridade</span>
+    <span class="kw">Clareza</span>
+    <span class="kw">Autoridade Conquistada</span>
+  </div>
+</div>
+
+<!-- BRAND -->
+<section id="brand">
+  <div class="section-label">01 — Fundação</div>
+  <div class="section-title">Brand Direction</div>
+
+  <div class="statement-box">
+    <p>A academia que <strong>conhece o caminho</strong> — porque já o percorreu — e dá aos alunos o caminho mais <strong>directo e comprovado</strong> para passar no exame.</p>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-label">Perfil A</div>
+      <div class="card-value">18–22, primeira tentativa</div>
+      <div class="card-desc">Precisa de direcção e confiança. Responde a estrutura e resultados claros.</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Perfil B</div>
+      <div class="card-value">25–35, mudança de carreira</div>
+      <div class="card-desc">Precisa de eficiência e prova. Responde a método e taxas de aprovação.</div>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="card-label">Estado emocional</div>
+      <div class="card-value">Motivado + competitivo</div>
+      <div class="card-desc">Já decidiu tentar. Procura a melhor ferramenta, não reassurance.</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Credencial principal</div>
+      <div class="card-value">O Método</div>
+      <div class="card-desc">Sistema proprietário — não estudo genérico. Um processo comprovado.</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Personalidade</div>
+      <div class="card-value">Alumni de sucesso</div>
+      <div class="card-desc">Relatable, já passou por isto, puxa-te para a frente.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-label">Tensão central resolvida</div>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:8px;">
+      <div style="padding:8px 16px;background:var(--navy-mid);border-radius:6px;font-size:13px;color:var(--navy-muted);">Instituição séria<br><small>estruturada, exigente</small></div>
+      <div style="font-size:18px;color:#ccc;">+</div>
+      <div style="padding:8px 16px;background:#E05B3A18;border:1px solid #E05B3A44;border-radius:6px;font-size:13px;color:var(--accent-ember);">Alumni de sucesso<br><small>relatable, conquistado</small></div>
+      <div style="font-size:18px;color:#ccc;">=</div>
+      <div style="padding:8px 16px;background:var(--surface-card);border-radius:6px;font-size:13px;color:var(--navy-deep);font-weight:600;">Autoridade Conquistada<br><small style="font-weight:400;color:#666;">rigoroso, mas humano</small></div>
+    </div>
+  </div>
+
+  <div style="margin-top:20px;">
+    <div class="card-label" style="margin-bottom:12px;">Espectros da marca</div>
+    <div class="spectrum-grid">
+      <div class="spectrum-item">
+        <div class="spectrum-ends"><span>Institucional</span><span>Acessível</span></div>
+        <div class="spectrum-track"><div class="spectrum-fill" style="width:35%;"></div><div class="spectrum-dot" style="left:35%;"></div></div>
+        <div class="spectrum-name">Ligeiramente institucional</div>
+      </div>
+      <div class="spectrum-item">
+        <div class="spectrum-ends"><span>Tradicional</span><span>Moderno</span></div>
+        <div class="spectrum-track"><div class="spectrum-fill" style="width:55%;"></div><div class="spectrum-dot" style="left:55%;"></div></div>
+        <div class="spectrum-name">Levemente moderno</div>
+      </div>
+      <div class="spectrum-item">
+        <div class="spectrum-ends"><span>Exclusivo</span><span>Inclusivo</span></div>
+        <div class="spectrum-track"><div class="spectrum-fill" style="width:40%;"></div><div class="spectrum-dot" style="left:40%;"></div></div>
+        <div class="spectrum-name">Selectivo mas não elitista</div>
+      </div>
+      <div class="spectrum-item">
+        <div class="spectrum-ends"><span>Sério</span><span>Enérgico</span></div>
+        <div class="spectrum-track"><div class="spectrum-fill" style="width:45%;"></div><div class="spectrum-dot" style="left:45%;"></div></div>
+        <div class="spectrum-name">Equilibrado</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="never-row">
+    <div class="never-tag">✕ Agressivo ou intimidante</div>
+    <div class="never-tag">✕ Governamental / burocrático</div>
+    <div class="never-tag">✕ Barato ou desconto</div>
+    <div class="never-tag">✕ Suave / poster motivacional</div>
+  </div>
+</section>
+
+<hr>
+
+<!-- COLOUR -->
+<section id="colour">
+  <div class="section-label">02 — Visual</div>
+  <div class="section-title">Sistema de Cores</div>
+
+  <div class="card-label" style="margin-bottom:10px;">Escala navy — fundação</div>
+  <div class="swatch-row">
+    <div class="swatch" onclick="cp('#0C1B2E')">
+      <div class="swatch-color" style="background:#0C1B2E;"></div>
+      <div class="swatch-info"><div class="swatch-name">Midnight</div><div class="swatch-hex">#0C1B2E</div><div class="swatch-role">Hero, navbar, footer</div></div>
+    </div>
+    <div class="swatch" onclick="cp('#1A3354')">
+      <div class="swatch-color" style="background:#1A3354;"></div>
+      <div class="swatch-info"><div class="swatch-name">Banner</div><div class="swatch-hex">#1A3354</div><div class="swatch-role">Cards, divisores de secção</div></div>
+    </div>
+    <div class="swatch" onclick="cp('#3B6080')">
+      <div class="swatch-color" style="background:#3B6080;"></div>
+      <div class="swatch-info"><div class="swatch-name">Steel</div><div class="swatch-hex">#3B6080</div><div class="swatch-role">Overlays, testemunhos</div></div>
+    </div>
+    <div class="swatch" onclick="cp('#8BAFC8')">
+      <div class="swatch-color" style="background:#8BAFC8;"></div>
+      <div class="swatch-info"><div class="swatch-name">Mist</div><div class="swatch-hex">#8BAFC8</div><div class="swatch-role">Texto secundário sobre escuro</div></div>
+    </div>
+  </div>
+
+  <div class="card-label" style="margin-bottom:10px;margin-top:18px;">Neutros — superfícies claras</div>
+  <div class="swatch-row">
+    <div class="swatch" onclick="cp('#FFFFFF')">
+      <div class="swatch-color" style="background:#FFFFFF;border-bottom:1px solid #eee;"></div>
+      <div class="swatch-info"><div class="swatch-name">White</div><div class="swatch-hex">#FFFFFF</div><div class="swatch-role">Fundo principal</div></div>
+    </div>
+    <div class="swatch" onclick="cp('#F6F8FA')">
+      <div class="swatch-color" style="background:#F6F8FA;border-bottom:1px solid #eee;"></div>
+      <div class="swatch-info"><div class="swatch-name">Off white</div><div class="swatch-hex">#F6F8FA</div><div class="swatch-role">Secções alternadas</div></div>
+    </div>
+    <div class="swatch" onclick="cp('#EAEFF4')">
+      <div class="swatch-color" style="background:#EAEFF4;border-bottom:1px solid #dde4ec;"></div>
+      <div class="swatch-info"><div class="swatch-name">Ice</div><div class="swatch-hex">#EAEFF4</div><div class="swatch-role">Cards, linhas de tabela, inputs</div></div>
+    </div>
+    <div class="swatch" onclick="cp('#1E1E1E')">
+      <div class="swatch-color" style="background:#1E1E1E;"></div>
+      <div class="swatch-info"><div class="swatch-name">Ink</div><div class="swatch-hex">#1E1E1E</div><div class="swatch-role">Corpo de texto sobre claro</div></div>
+    </div>
+  </div>
+
+  <div class="card-label" style="margin-bottom:10px;margin-top:18px;">Hierarquia de acentos</div>
+  <div class="accent-group">
+    <div class="accent-swatch">
+      <div class="accent-color" style="background:#E05B3A;"></div>
+      <div class="accent-name">Ember</div>
+      <div class="accent-hex">#E05B3A</div>
+      <div class="accent-tag">Primário — CTAs, destaques, estados activos. Usar mais.</div>
+    </div>
+    <div class="accent-swatch">
+      <div class="accent-color" style="background:#C8A84B;"></div>
+      <div class="accent-name">Gold</div>
+      <div class="accent-hex">#C8A84B</div>
+      <div class="accent-tag">Prestígio — badges, estatísticas, momentos de conquista.</div>
+    </div>
+    <div class="accent-swatch">
+      <div class="accent-color" style="background:#00897B;"></div>
+      <div class="accent-name">Teal</div>
+      <div class="accent-hex">#00897B</div>
+      <div class="accent-tag">Utilitário — links, ícones, acções secundárias.</div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- TYPOGRAPHY -->
+<section id="typography">
+  <div class="section-label">03 — Visual</div>
+  <div class="section-title">Sistema Tipográfico</div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-label">Google Fonts import</div>
+    <div style="margin-top:8px;font-family:monospace;font-size:13px;color:var(--navy-deep);background:var(--surface-card);padding:12px 16px;border-radius:6px;line-height:1.6;">
+      &lt;link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet"&gt;
+    </div>
+    <div style="margin-top:8px;font-size:12px;color:#888;">Uma família, dois estilos. Sem imports adicionais.</div>
+  </div>
+
+  <div class="type-demo">
+    <div class="type-row">
+      <div class="type-meta">Barlow Condensed 800<br>48px · uppercase</div>
+      <div class="type-specimen" style="font-family:'Barlow Condensed';font-size:48px;font-weight:800;text-transform:uppercase;letter-spacing:0.02em;">Prepare-se Para Vencer</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">Barlow Condensed 700<br>32px · uppercase</div>
+      <div class="type-specimen" style="font-family:'Barlow Condensed';font-size:32px;font-weight:700;text-transform:uppercase;letter-spacing:0.02em;">A Nossa Metodologia</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">Barlow Condensed 600<br>22px · uppercase</div>
+      <div class="type-specimen" style="font-family:'Barlow Condensed';font-size:22px;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;">Cursos Disponíveis</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">Barlow 500<br>18px · mixed case</div>
+      <div class="type-specimen" style="font-family:'Barlow';font-size:18px;font-weight:500;">Subtítulo de secção</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">Barlow 400<br>16px · body</div>
+      <div class="type-specimen" style="font-family:'Barlow';font-size:16px;font-weight:400;color:#8BAFC8;line-height:1.7;max-width:560px;">Os nossos formadores são profissionais activos nas forças de segurança, com experiência directa nos processos de selecção.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">Barlow 400<br>13px · caption</div>
+      <div class="type-specimen" style="font-family:'Barlow';font-size:13px;font-weight:400;color:#3B6080;">Nota de rodapé · Legenda · Etiqueta</div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- MOODBOARD CONTENT -->
+<section id="moodboard">
+  <div class="section-label">04 — Entregável</div>
+  <div class="section-title">Conteúdo do Moodboard</div>
+
+  <div class="frame-block">
+    <div class="frame-header">
+      <span class="frame-num">FRAME 01</span>
+      <span class="frame-name">Cover + Brand Direction</span>
+    </div>
+    <div class="frame-body">
+      <div class="frame-item">
+        <div class="fi-label">Título</div>
+        <div><div>Academia de Estudos</div><div class="fi-note">Barlow Condensed 800, branco, grande — ocupa o terço superior do frame</div></div>
+      </div>
+      <div class="frame-item">
+        <div class="fi-label">Subtítulo</div>
+        <div><div>Proposta de Identidade Visual — Projecto Final</div><div class="fi-note">Barlow 400, mist #8BAFC8</div></div>
+      </div>
+      <div class="frame-item">
+        <div class="fi-label">Assinatura</div>
+        <div><div>[Nome Apelido] · Março 2026</div><div class="fi-note">Canto inferior esquerdo, pequeno</div></div>
+      </div>
+      <div class="frame-item">
+        <div class="fi-label">Keywords</div>
+        <div><div>RIGOR · MÉTODO · AMBIÇÃO · AUTORIDADE · CLAREZA</div><div class="fi-note">Barlow Condensed 700, espaçados, ember #E05B3A — linha central do frame</div></div>
+      </div>
+      <div class="frame-item">
+        <div class="fi-label">Statement</div>
+        <div><div>"A academia que conhece o caminho — porque já o percorreu."</div><div class="fi-note">Centrado, Barlow 400, branco, abaixo das keywords</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame-block">
+    <div class="frame-header">
+      <span class="frame-num">FRAME 02</span>
+      <span class="frame-name">Inspiration + Visual References</span>
+    </div>
+    <div class="frame-body">
+      <div class="frame-item">
+        <div class="fi-label">Ref 01</div>
+        <div><div>US Marines — marines.com</div><div class="fi-note">Crop: hero heading "WE WERE MADE FOR THIS" · Borrowing: tipografia condensada uppercase em display scale sobre fundo escuro</div></div>
+      </div>
+      <div class="frame-item">
+        <div class="fi-label">Ref 02</div>
+        <div><div>Royal Navy — royalnavy.mod.uk</div><div class="fi-note">Crop: secção hero com botões CTA teal · Borrowing: fundação navy escura + acento de alto contraste em elementos interactivos</div></div>
+      </div>
+      <div class="frame-item">
+        <div class="fi-label">Ref 03</div>
+        <div><div>MasterClass — masterclass.com</div><div class="fi-note">Crop: grelha de cards de cursos · Borrowing: layout de cards limpo com fotografia forte e hierarquia de texto mínima</div></div>
+      </div>
+      <div class="frame-item">
+        <div class="fi-label">Ref 04</div>
+        <div><div>Topgend — topgend.fr</div><div class="fi-note">Crop: nav ou secção de estrutura · Borrowing: concorrente directo — estrutura de conteúdo para contexto de preparação para exames</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame-block">
+    <div class="frame-header">
+      <span class="frame-num">FRAME 03</span>
+      <span class="frame-name">Colour + Typography</span>
+    </div>
+    <div class="frame-body">
+      <div class="frame-item">
+        <div class="fi-label">Cores</div>
+        <div><div>Mostrar todos os tokens com hex + label de uso</div><div class="fi-note">Escala navy (4 stops) · Neutros · Hierarquia ember / gold / teal</div></div>
+      </div>
+      <div class="frame-item">
+        <div class="fi-label">Tipografia</div>
+        <div><div>Espécime completo — Barlow Condensed headings + Barlow body</div><div class="fi-note">Mostrar H1 → H2 → body → caption em tamanhos reais, sobre fundo escuro e claro</div></div>
+      </div>
+      <div class="frame-item">
+        <div class="fi-label">Preview</div>
+        <div><div>Mini hero strip com copy real</div><div class="fi-note">"Prepare-se Para Vencer" block — navy bg, ember CTA, mist subtext</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--navy-deep);border-radius:8px;padding:28px 32px;margin-top:8px;">
+    <div style="font-family:'Barlow Condensed';font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-ember);margin-bottom:14px;">Mini hero — copy pronto para o Frame 03</div>
+    <div style="font-family:'Barlow Condensed';font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-ember);margin-bottom:8px;">Academia de Estudos</div>
+    <div style="font-family:'Barlow Condensed';font-size:40px;font-weight:800;color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:12px;">Prepare-se<br>Para Vencer.</div>
+    <div style="font-family:'Barlow';font-size:14px;color:var(--navy-muted);line-height:1.7;margin-bottom:20px;max-width:480px;">Metodologia rigorosa e comprovada para concursos públicos de defesa e segurança nacional.</div>
+    <span style="font-family:'Barlow Condensed';font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--accent-ember);color:#fff;padding:10px 24px;border-radius:4px;">Ver Cursos</span>
+  </div>
+</section>
+
+<hr>
+
+<!-- CSS VARIABLES -->
+<section id="variables">
+  <div class="section-label">05 — Código</div>
+  <div class="section-title">variables.css</div>
+
+<pre><span class="c-comment">/* ============================================
+   Academia de Estudos — Design Tokens
+   variables.css
+   ============================================ */</span>
+
+<span class="c-selector">:root</span> {
+
+  <span class="c-comment">/* --- TYPOGRAPHY --- */</span>
+  <span class="c-var">--font-heading</span>: <span class="c-val-neutral">'Barlow Condensed', sans-serif</span>;
+  <span class="c-var">--font-body</span>:    <span class="c-val-neutral">'Barlow', sans-serif</span>;
+
+  <span class="c-comment">/* --- NAVY SCALE --- */</span>
+  <span class="c-var">--color-navy-deep</span>:   <span class="c-val-navy">#0C1B2E</span>; <span class="c-comment">/* hero, footer, navbar */</span>
+  <span class="c-var">--color-navy-mid</span>:    <span class="c-val-navy">#1A3354</span>; <span class="c-comment">/* cards, section dividers */</span>
+  <span class="c-var">--color-navy-light</span>:  <span class="c-val-navy">#3B6080</span>; <span class="c-comment">/* overlays, testimonials */</span>
+  <span class="c-var">--color-navy-muted</span>:  <span class="c-val-navy">#8BAFC8</span>; <span class="c-comment">/* secondary text on dark */</span>
+
+  <span class="c-comment">/* --- NEUTRAL / SURFACES --- */</span>
+  <span class="c-var">--color-surface-base</span>:   <span class="c-val-neutral">#FFFFFF</span>; <span class="c-comment">/* main page background */</span>
+  <span class="c-var">--color-surface-subtle</span>: <span class="c-val-neutral">#F6F8FA</span>; <span class="c-comment">/* alternating sections */</span>
+  <span class="c-var">--color-surface-card</span>:   <span class="c-val-neutral">#EAEFF4</span>; <span class="c-comment">/* cards, table rows, inputs */</span>
+  <span class="c-var">--color-text-base</span>:      <span class="c-val-neutral">#1E1E1E</span>; <span class="c-comment">/* body text on light */</span>
+
+  <span class="c-comment">/* --- ACCENT HIERARCHY --- */</span>
+  <span class="c-var">--color-accent-primary</span>:  <span class="c-val-ember">#E05B3A</span>; <span class="c-comment">/* ember — CTAs, highlights */</span>
+  <span class="c-var">--color-accent-prestige</span>: <span class="c-val-gold">#C8A84B</span>; <span class="c-comment">/* gold — badges, stats */</span>
+  <span class="c-var">--color-accent-utility</span>:  <span class="c-val-teal">#00897B</span>; <span class="c-comment">/* teal — links, icons */</span>
+
+  <span class="c-comment">/* --- SPACING (8pt grid) --- */</span>
+  <span class="c-var">--space-1</span>:  <span class="c-val-neutral">8px</span>;
+  <span class="c-var">--space-2</span>:  <span class="c-val-neutral">16px</span>;
+  <span class="c-var">--space-3</span>:  <span class="c-val-neutral">24px</span>;
+  <span class="c-var">--space-4</span>:  <span class="c-val-neutral">32px</span>;
+  <span class="c-var">--space-6</span>:  <span class="c-val-neutral">48px</span>;
+  <span class="c-var">--space-8</span>:  <span class="c-val-neutral">64px</span>;
+  <span class="c-var">--space-12</span>: <span class="c-val-neutral">96px</span>;
+
+  <span class="c-comment">/* --- LAYOUT --- */</span>
+  <span class="c-var">--max-width</span>:    <span class="c-val-neutral">1100px</span>;
+  <span class="c-var">--radius-sm</span>:    <span class="c-val-neutral">4px</span>;
+  <span class="c-var">--radius-md</span>:    <span class="c-val-neutral">8px</span>;
+  <span class="c-var">--radius-lg</span>:    <span class="c-val-neutral">12px</span>;
+  <span class="c-var">--border-color</span>: <span class="c-val-neutral">#EAEFF4</span>;
+
+  <span class="c-comment">/* --- TYPE SCALE --- */</span>
+  <span class="c-var">--text-h1</span>:      <span class="c-val-neutral">clamp(36px, 6vw, 60px)</span>;
+  <span class="c-var">--text-h2</span>:      <span class="c-val-neutral">clamp(26px, 4vw, 36px)</span>;
+  <span class="c-var">--text-h3</span>:      <span class="c-val-neutral">clamp(20px, 3vw, 26px)</span>;
+  <span class="c-var">--text-h4</span>:      <span class="c-val-neutral">20px</span>;
+  <span class="c-var">--text-body</span>:    <span class="c-val-neutral">16px</span>;
+  <span class="c-var">--text-small</span>:   <span class="c-val-neutral">14px</span>;
+  <span class="c-var">--text-caption</span>: <span class="c-val-neutral">13px</span>;
+}</pre>
+</section>
+
+<hr>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="section-label">06 — Projecto</div>
+  <div class="section-title">Timeline — 15 dias</div>
+  <div class="timeline">
+    <div class="tl-row"><div class="tl-days">Dias 1–2</div><div class="tl-card done"><div class="tl-phase">Concluído ✓</div><div class="tl-task">Pesquisa — sites de referência, paleta, tipografia, padrões de layout</div></div></div>
+    <div class="tl-row"><div class="tl-days">Dias 3–4</div><div class="tl-card active"><div class="tl-phase">Em curso →</div><div class="tl-task">Figma — moodboard (3 frames) + wireframes das 5 páginas</div></div></div>
+    <div class="tl-row"><div class="tl-days">Dias 5–6</div><div class="tl-card"><div class="tl-phase">Dev</div><div class="tl-task">Estrutura de ficheiros + componentes partilhados (navbar, footer, CSS base)</div></div></div>
+    <div class="tl-row"><div class="tl-days">Dias 7–8</div><div class="tl-card"><div class="tl-phase">Dev</div><div class="tl-task">Início (index.html) + Metodologia</div></div></div>
+    <div class="tl-row"><div class="tl-days">Dias 9–10</div><div class="tl-card"><div class="tl-phase">Dev</div><div class="tl-task">Exames + Cursos + Contacto</div></div></div>
+    <div class="tl-row"><div class="tl-days">Dia 11</div><div class="tl-card"><div class="tl-phase">Dev</div><div class="tl-task">Responsividade em todas as páginas</div></div></div>
+    <div class="tl-row"><div class="tl-days">Dia 12</div><div class="tl-card"><div class="tl-phase">Extras</div><div class="tl-task">1–2 extras se houver tempo (cookie banner + social links)</div></div></div>
+    <div class="tl-row"><div class="tl-days">Dia 13</div><div class="tl-card"><div class="tl-phase">Review</div><div class="tl-task">Polimento visual, limpeza de código, comentários</div></div></div>
+    <div class="tl-row"><div class="tl-days">Dia 14</div><div class="tl-card"><div class="tl-phase">Entrega</div><div class="tl-task">Documentação PDF — processo + decisões de design</div></div></div>
+    <div class="tl-row"><div class="tl-days">Dia 15</div><div class="tl-card"><div class="tl-phase">Buffer</div><div class="tl-task">Ajustes finais + empacotamento ZIP</div></div></div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Academia de Estudos</strong> — Design Brief Completo · Gerado em Março 2026</p>
+  <p style="margin-top:6px;">Copiar este ficheiro para novos chats para manter o contexto do projecto.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function cp(hex) {
+  navigator.clipboard.writeText(hex).catch(()=>{});
+  const t = document.getElementById('toast');
+  t.textContent = hex + ' copiado';
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

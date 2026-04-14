@@ -1,0 +1,36 @@
+.hero-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--color-navy-mid);
+  color: var(--color-navy-muted);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+  border: 1px solid var(--color-navy-mid);
+  border-radius: 2px;
+}
+
+.section--dark h1 span {
+  color: var(--color-accent-primary);
+}
+
+.section--dark h1 {
+  color: var(--color-text-bright);
+}
+
+.section--dark p {
+  color: var(--color-navy-muted);
+}
+
+.hero__media {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-navy-muted);
+  box-shadow: 16px 16px 0 var(--color-accent-primary);
+}
+
+.hero__media img {
+  opacity: 0.8;
+  height: 500px;
+}

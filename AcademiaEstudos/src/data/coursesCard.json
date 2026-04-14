@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "img": "policia.jpg",
+        "img": "/policia.jpg",
         "name": "Curso de Preparação GNR / PSP",
         "description": "Prepara-te para ingressar nas forças de segurança com um programa focado em legislação, cultura geral, matemática e simulacros reais de exame.",
         "duration": "8 Meses",
@@ -23,7 +23,7 @@
     },
     {
         "id": 2,
-        "img": "exercito.jpg",
+        "img": "/exercito.jpg",
         "name": "Curso de Preparação para o Exército",
         "description": "Desenvolve a condição física e os conhecimentos necessários para ingressar no Exército Português, com treino progressivo e simulacros de selecção.",
         "duration": "6 Meses",
@@ -45,7 +45,7 @@
     },
     {
         "id": 3,
-        "img": "marinha.jpg",
+        "img": "/marinha.jpg",
         "name": "Curso de Preparação para a Marinha",
         "description": "Prepara-te para a vida naval com treino aquático, condicionamento físico, matemática e simulacros escritos e físicos em condições reais de selecção.",
         "duration": "8 Meses",
@@ -67,7 +67,7 @@
     },
     {
         "id": 4,
-        "img": "fuzileiros.jpg",
+        "img": "/fuzileiros.jpg",
         "name": "Curso de Preparação para Fuzileiros",
         "description": "Um programa intensivo que forja a resistência física, mental e técnica exigida para ingressar nas forças de elite naval das Forças Armadas Portuguesas.",
         "duration": "12 Meses",
