@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import NavbarButton from './buttons/NavbarButton'
 import HamburguerButton from './buttons/HamburguerButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
@@ -52,10 +51,9 @@ export default function Navbar() {
             <NavLink to="/cursos" onClick={closeMenu}>Cursos</NavLink>
             <NavLink to="/contacto" onClick={closeMenu}>Contacto</NavLink>
           </div>
-          <NavbarButton
-            children="Log in / Sign Up"
-            className="navbar__mobile-cta btn--primary" onClick={closeMenu}>
-          </NavbarButton>
+          <NavLink to="/login" className="btn--primary navbar__mobile-cta" onClick={closeMenu}>
+            Log in / Sign Up
+          </NavLink>
         </div>
       )}
     </header>

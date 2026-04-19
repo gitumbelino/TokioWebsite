@@ -1,70 +1,69 @@
 /* ============================================
-   Academia de Estudos — Layout
-   layout.css
-   
-   Handles: container, grid system, section
-   wrappers, navbar, footer, hero, and
-   utility layout classes.
-   
-   Does NOT handle: colors, fonts, components.
-   Those live in their own files.
+
+    LAYOUT GERAL:
+   -containers
+   -grid
+   -wrappers de secção
+   -navbar
+   -footer
+   -hero 
+
    ============================================ */
 
 
 /* ============================================
    1. CONTAINER
-   Central content wrapper used on every page.
-   Max-width 1200px, centered, with side padding
-   so content never touches viewport edges.
+   Wrapper central usado em todas as páginas.
+   Largura máxima de 1200px, centrado, com padding
+   lateral para o conteúdo nunca tocar nas bordas.
    ============================================ */
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--space-5); /* 40px each side */
+  padding: 0 var(--space-5); /* 40px em cada lado */
 }
 
 
 /* ============================================
-   2. SECTION WRAPPERS
-   Every page section gets .section.
-   Alternating backgrounds use modifier classes.
+   2. WRAPPERS DE SECÇÃO
+   Cada secção da página usa .section.
    ============================================ */
 
 .section {
-  padding: var(--space-10) 0; /* 80px top/bottom */
+  padding: var(--space-10) 0; /* 80px cima/baixo */
 }
 
-/* Hero gets extra breathing room */
+/* Hero com mais espaço para respirar */
 .section--hero {
-  padding: var(--space-12) 0; /* 96px top/bottom */
+  padding: var(--space-12) 0; /* 96px cima/baixo */
   min-height: 80vh;
   display: flex;
   align-items: center;
 }
 
-/* Compact hero — for inner pages that need a title band, not a full landing hero */
+/* Hero compacto — para páginas internas que precisam de uma banda de título, não de um hero completo */
 .section--hero--sm {
   min-height: 30vh;
   padding: var(--space-8) 0;
 }
 
-/* Light alternating section (mid-page rhythm break) */
+/* Secção clara alternada (quebra de ritmo a meio da página) */
 .section--light {
   background-color: var(--color-surface-subtle);
 }
 
-/* Dark section (footer, hero, CTAs) */
+/* Secção escura (footer, hero, CTAs) */
 .section--dark {
   background-color: var(--color-navy-deep);
 }
 
-/* Mid-tone section (cards, testimonials) */
+/* Secção de tom médio (cards, testemunhos) */
 .section--card {
   background-color: var(--color-surface-card);
 }
 
-/* Section header block — eyebrow + title pattern */
+/* Cabeçalho de secção — padrão eyebrow + título */
 .section__header {
   margin-bottom: var(--space-6); /* 48px */
 }
@@ -72,7 +71,7 @@
 .section__eyebrow {
   display: block;
   margin-bottom: var(--space-1); /* 8px */
-  /* Color and font set in typography.css */
+  /* Cor e fonte definidas em typography.css */
 }
 
 .section__title {
@@ -83,7 +82,7 @@
   max-width: 600px;
 }
 
-/* Centered variant — for sections where content is centered */
+/* Variante centrada — para secções com conteúdo centrado */
 .section__header--centered {
   text-align: center;
 }
@@ -101,14 +100,14 @@
 
 
 /* ============================================
-   3. GRID SYSTEM
-   Simple, reusable column grids.
-   All collapse to 1 column on mobile.
+   3. SISTEMA DE GRID
+   Grids de colunas simples e reutilizáveis.
+   Todos colapsam para 1 coluna em mobile.
    ============================================ */
 
 .grid {
   display: grid;
-  gap: var(--space-4); /* 32px default gap */
+  gap: var(--space-4); /* espaçamento padrão de 32px */
 }
 
 .grid--2 {
@@ -123,42 +122,25 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* Auto-fill grid — responsive without media queries */
-/* Use for course cards, exam cards — min 260px per column */
-.grid--auto {
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-}
-
-/* Asymmetric layout: sidebar + main content */
-.grid--sidebar {
-  grid-template-columns: 280px 1fr;
-  gap: var(--space-6); /* 48px */
-}
-
-/* Tighter gap variant */
-.grid--tight {
-  gap: var(--space-2); /* 16px */
-}
 
 
 /* ============================================
    4. NAVBAR
-   Fixed top, full width, 64px tall.
-   Content constrained inside .container.
+   Fixa no topo, largura total, 64px de altura.
+   Conteúdo limitado dentro de .container.
    ============================================ */
 
 .navbar {
   position: fixed;
-  /* The ticker is fixed at top: 0 with z-index 101.
-     The navbar sits directly below it by offsetting top by the ticker's height. */
+
   top: var(--ticker-height);
   left: 0;
   right: 0;
-  z-index: 100; /* one level below the ticker so it never overlaps it */
+  z-index: 100;
   height: var(--navbar-height);
   display: flex;
   align-items: center;
-  /* Background + border set in components.css */
+
 }
 
 .navbar__inner {
@@ -178,7 +160,7 @@
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: var(--space-4); /* 32px between links */
+  gap: var(--space-4); /* 32px entre links */
   list-style: none;
 }
 
@@ -186,9 +168,9 @@
   flex-shrink: 0;
 }
 
-/* Both the ticker and navbar are fixed, so they sit on top of the normal document flow.
-   Without this padding the first section would be hidden behind them.
-   calc() keeps it in sync automatically if either height token changes. */
+/* O ticker e a navbar são ambos fixos, ficando por cima do fluxo normal do documento.
+   Sem este padding, a primeira secção ficaria escondida atrás deles.
+   O calc() mantém a sincronização automática se algum token de altura mudar. */
 body {
   padding-top: calc(var(--ticker-height) + var(--navbar-height));
 }
@@ -196,17 +178,17 @@ body {
 
 /* ============================================
    5. FOOTER
-   Full-width dark footer with .container inside.
-   3-column grid collapses to 1 on mobile.
+   Footer escuro a largura total com .container dentro.
+   Grid de 3 colunas colapsa para 1 em mobile.
    ============================================ */
 
 .footer {
-  padding: var(--space-10) 0 var(--space-5); /* 80px top, 40px bottom */
+  padding: var(--space-10) 0 var(--space-5); /* 80px em cima, 40px em baixo */
 }
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* brand column wider */
+  grid-template-columns: 2fr 1fr 1fr; /* coluna da marca mais larga */
   gap: var(--space-8); /* 64px */
   margin-bottom: var(--space-8);
 }
@@ -218,12 +200,12 @@ body {
 }
 
 .footer__links li + li {
-  margin-top: var(--space-2); 
+  margin-top: var(--space-2);
 }
 
 .footer__bottom {
-  padding-top: var(--space-4); 
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* -----------divisoria---------------- */
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* -----------divisória---------------- */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -231,9 +213,9 @@ body {
 
 
 /* ============================================
-   6. HERO LAYOUT
-   Two-column split: text left, image right.
-   Image column hides on mobile.
+   6. LAYOUT DO HERO
+   Divisão em duas colunas: texto à esquerda, imagem à direita.
+   A coluna da imagem fica oculta em mobile.
    ============================================ */
 
 .hero__inner {
@@ -244,12 +226,8 @@ body {
   width: 100%;
 }
 
-.hero__content {
-  /* Text side */
-}
-
 .hero__media {
-  /* Image/visual side — colors and borders in hero.css */
+  /* Lado da imagem/visual — cores e bordas em hero.css */
   overflow: hidden;
 }
 
@@ -262,11 +240,11 @@ body {
 
 
 /* ============================================
-   7. UTILITY CLASSES
-   Small helpers to avoid repetition.
+   7. CLASSES UTILITÁRIAS
+   Atalhos pequenos para evitar repetição.
    ============================================ */
 
-/* Flex shortcuts */
+/* Atalhos de flex */
 .flex          { display: flex; }
 .flex--center  { display: flex; align-items: center; justify-content: center; }
 .flex--between { display: flex; align-items: center; justify-content: space-between; }
@@ -274,7 +252,7 @@ body {
 .flex--gap-md  { gap: var(--space-2); } /* 16px */
 .flex--gap-lg  { gap: var(--space-4); } /* 32px */
 
-/* Spacing helpers */
+/* Atalhos de espaçamento */
 .mt-1 { margin-top: var(--space-1); }
 .mt-2 { margin-top: var(--space-2); }
 .mt-3 { margin-top: var(--space-3); }
@@ -285,7 +263,7 @@ body {
 .mb-3 { margin-bottom: var(--space-3); }
 .mb-4 { margin-bottom: var(--space-4); }
 
-/* Visibility */
+/* Visibilidade */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -296,42 +274,42 @@ body {
 
 
 /* ============================================
-   8. RESPONSIVE BREAKPOINTS
-   Mobile-first approach.
-   All grids collapse to single column below 768px.
-   Navbar becomes hamburger below 768px.
+   8. BREAKPOINTS RESPONSIVOS
+   Abordagem mobile-first.
+   Todos os grids colapsam para uma coluna abaixo de 768px.
+   A navbar passa a hamburger abaixo de 768px.
    ============================================ */
 
 @media (max-width: 768px) {
 
-  /* Tighten section padding on mobile */
+  /* Reduzir padding das secções em mobile */
   .section        { padding: var(--space-8) 0; }   /* 64px */
   .section--hero  { padding: var(--space-8) 0; min-height: 60vh; }
 
-  /* Container side padding narrows */
-  .container { padding: 0 var(--space-2); } /* 16px each side */
+  /* Padding lateral do container reduz */
+  .container { padding: 0 var(--space-2); } /* 16px em cada lado */
 
-  /* All grids collapse to 1 column */
+  /* Todos os grids colapsam para 1 coluna */
   .grid--2,
   .grid--3,
   .grid--4,
   .grid--sidebar { grid-template-columns: 1fr; }
 
-  /* Footer grid collapses */
+  /* Grid do footer colapsa */
   .footer__grid { grid-template-columns: 1fr; gap: var(--space-5); }
   .footer__bottom { flex-direction: column; gap: var(--space-2); text-align: center; }
 
-  /* Hero: stack vertically, hide image */
+  /* Hero: empilhar verticalmente, esconder imagem */
   .hero__inner { grid-template-columns: 1fr; }
   .hero__media  { display: none; }
 
-  /* Navbar: hide desktop links */
+  /* Navbar: esconder links do desktop */
   .navbar__links { display: none; }
-  .navbar__links.is-open { /* JS toggles this */
+  .navbar__links.is-open { /* JS activa esta classe */
     display: flex;
     flex-direction: column;
     position: fixed;
-    /* Must clear both the ticker and the navbar to open flush below the header stack */
+    /* Tem de limpar o ticker e a navbar para abrir logo abaixo do cabeçalho */
     top: calc(var(--ticker-height) + var(--navbar-height));
     left: 0;
     right: 0;

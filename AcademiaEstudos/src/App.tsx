@@ -7,6 +7,8 @@ import Courses from './pages/Courses';
 import Methods from './pages/Methods';
 import Exams from './pages/Exams';
 import Contacts from './pages/Contacts';
+import LogIn from './pages/LogIn';
+import Register from './pages/Register';
 
 import methodologyCardsData from './data/methodologyCards.json';
 import timetableData from './data/timetable.json';
@@ -49,6 +51,8 @@ function App() {
           examsData={examsData}
         />} />
         <Route path="/contacto" element={<Contacts />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/registo" element={<Register />} />
       </Routes>
 
       <Footer></Footer>
