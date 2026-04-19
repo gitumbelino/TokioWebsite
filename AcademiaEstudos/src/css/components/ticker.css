@@ -1,3 +1,5 @@
+/* ====================== layout ====================== */
+
 .announcement-ticker {
   position: fixed;
   top: 0;
@@ -21,6 +23,8 @@
   min-height: 32px;
 }
 
+/* ====================== item + animation ====================== */
+
 .announcement-ticker__item {
   display: flex;
   align-items: center;
@@ -42,6 +46,8 @@
   transform: translateY(0);
 }
 
+/* ====================== text elements ====================== */
+
 .announcement-ticker__label {
   font-weight: 700;
   text-transform: uppercase;
@@ -55,6 +61,8 @@
 .announcement-ticker__text {
   color: var(--color-navy-muted);
 }
+
+/* ====================== responsive ====================== */
 
 @media (max-width: 768px) {
   .announcement-ticker__item {

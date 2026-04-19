@@ -1,3 +1,5 @@
+/* ====================== layout ====================== */
+
 .timetable__wrapper {
   overflow-x: auto;
   border: 1px solid var(--color-surface-card);
@@ -12,6 +14,8 @@
   text-align: left;
 }
 
+/* ====================== header ====================== */
+
 .timetable__th {
   background-color: var(--color-navy-deep);
   color: var(--color-text-bright);
@@ -21,6 +25,8 @@
   letter-spacing: 0.08em;
   padding: var(--space-2) var(--space-3);
 }
+
+/* ====================== rows + cells ====================== */
 
 .timetable__row {
   border-bottom: 1px solid var(--color-surface-card);
@@ -40,6 +46,8 @@
 .timetable__cell {
   padding: var(--space-2) var(--space-3);
 }
+
+/* ====================== badge ====================== */
 
 .timetable__badge {
   display: block;

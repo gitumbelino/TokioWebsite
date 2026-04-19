@@ -6,7 +6,7 @@ export default function Contacts() {
   return (
     <main>
 
-      <section className="section section--hero section--dark">
+      <section className="section section--hero section--hero--sm section--dark">
         <div className="container">
           <div className="hero__content">
             <HeroBadge label="Apoio ao Candidato" />
@@ -16,6 +16,34 @@ export default function Contacts() {
               programas de preparação para concursos públicos. A sua jornada começa com
               a informação certa.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-strip">
+        <div className="container">
+          <div className="contact-strip__grid">
+
+            <div className="contact-strip__item">
+              <div className="contact-strip__icon">
+                <i className="fa-solid fa-location-dot" />
+              </div>
+              <div>
+                <h4 className="contact-strip__label">Contacto</h4>
+                <a href="tel:+351210000000" className="contact-strip__value">+351 210 000 000</a>
+              </div>
+            </div>
+
+            <div className="contact-strip__item">
+              <div className="contact-strip__icon">
+                <i className="fa-solid fa-envelope" />
+              </div>
+              <div>
+                <h4 className="contact-strip__label">Email</h4>
+                <a href="mailto:info@academia.pt" className="contact-strip__value">info@academia.pt</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

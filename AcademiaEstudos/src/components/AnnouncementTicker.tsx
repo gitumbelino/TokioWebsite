@@ -1,28 +1,8 @@
 import { useState, useEffect } from 'react';
 import type { TickerItem } from '../types/ticker';
+import tickerData from '../data/ticker.json';
 
-const items: TickerItem[] = [
-  {
-    label: 'GNR',
-    labelColor: 'var(--color-accent-primary)',
-    text: 'Provas Físicas — Inscrições até 15 de Maio',
-  },
-  {
-    label: 'PSP',
-    labelColor: 'var(--color-accent-prestige)',
-    text: 'Exame Teórico — Nova data: 22 de Junho',
-  },
-  {
-    label: 'Fuzileiros',
-    labelColor: 'var(--color-accent-utility)',
-    text: 'Abertura de Concurso — Prepare-se já',
-  },
-  {
-    label: 'Força Aérea',
-    labelColor: 'var(--color-navy-muted)',
-    text: 'Testes Psicotécnicos — Resultados disponíveis',
-  },
-];
+const items: TickerItem[] = tickerData;
 
 const INTERVAL = 4000;
 

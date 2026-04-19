@@ -1,3 +1,5 @@
+/* ====================== card ====================== */
+
 .methodology-card {
   background-color: var(--color-navy-mid);
   padding: var(--space-5);
@@ -10,6 +12,8 @@
 .methodology-card:hover {
   box-shadow: var(--shadow-lg);
 }
+
+/* ====================== icon ====================== */
 
 .methodology-icon {
   width: 56px;
@@ -24,6 +28,8 @@
   font-size: 1.5rem;
   margin-bottom: var(--space-3);
 }
+
+/* ====================== text ====================== */
 
 .methodology-card__title {
   font-size: 1.25rem;

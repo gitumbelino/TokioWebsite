@@ -43,6 +43,12 @@
   align-items: center;
 }
 
+/* Compact hero — for inner pages that need a title band, not a full landing hero */
+.section--hero--sm {
+  min-height: 30vh;
+  padding: var(--space-8) 0;
+}
+
 /* Light alternating section (mid-page rhythm break) */
 .section--light {
   background-color: var(--color-surface-subtle);

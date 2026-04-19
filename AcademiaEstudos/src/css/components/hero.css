@@ -1,3 +1,5 @@
+/* ====================== badge ====================== */
+
 .hero-badge {
   display: inline-block;
   padding: 4px 12px;
@@ -12,6 +14,8 @@
   border-radius: 2px;
 }
 
+/* ====================== dark section overrides ====================== */
+
 .section--dark h1 span {
   color: var(--color-accent-primary);
 }
@@ -23,6 +27,8 @@
 .section--dark p {
   color: var(--color-navy-muted);
 }
+
+/* ====================== media ====================== */
 
 .hero__media {
   border-radius: var(--radius-sm);

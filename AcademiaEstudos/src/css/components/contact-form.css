@@ -1,7 +1,4 @@
-/* ============================================
-   ContactForm
-   contact-form.css
-   ============================================ */
+/* ====================== card ====================== */
 
 .contact-form__card {
   background-color: var(--color-surface-base);
@@ -27,7 +24,7 @@
   line-height: 1.6;
 }
 
-/* ---- Form layout ---- */
+/* ====================== layout ====================== */
 
 .contact-form {
   display: flex;
@@ -35,7 +32,6 @@
   gap: var(--space-3);
 }
 
-/* Two-column row for name + phone */
 .contact-form__row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -48,7 +44,7 @@
   gap: var(--space-1);
 }
 
-/* ---- Label ---- */
+/* ====================== label ====================== */
 
 .contact-form__label {
   font-family: var(--font-heading);
@@ -59,7 +55,7 @@
   color: var(--color-navy-deep);
 }
 
-/* ---- Inputs, select, textarea ---- */
+/* ====================== inputs ====================== */
 
 .contact-form__input {
   width: 100%;
@@ -84,7 +80,8 @@
   box-shadow: 0 0 0 3px var(--color-accent-primary-subtle);
 }
 
-/* Select — hide default arrow, show custom icon */
+/* ====================== select ====================== */
+
 .contact-form__select-wrapper {
   position: relative;
 }
@@ -105,12 +102,13 @@
   pointer-events: none;
 }
 
-/* Textarea — no resize */
+/* ====================== textarea ====================== */
+
 .contact-form__textarea {
   resize: none;
 }
 
-/* ---- Submit button ---- */
+/* ====================== submit ====================== */
 
 .contact-form__submit {
   display: flex;
@@ -122,7 +120,7 @@
   cursor: pointer;
 }
 
-/* ---- Responsive ---- */
+/* ====================== responsive ====================== */
 
 @media (max-width: 768px) {
   .contact-form__card {

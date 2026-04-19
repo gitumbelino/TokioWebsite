@@ -1,3 +1,5 @@
+/* ====================== brand ====================== */
+
 .footer {
   color: var(--color-navy-muted);
 }
@@ -17,6 +19,8 @@
   margin-bottom: var(--space-1);
 }
 
+/* ====================== social links ====================== */
+
 .footer__social-link {
   width: var(--space-5);
   height: var(--space-5);
@@ -29,6 +33,14 @@
   justify-content: center;
   display: flex;
 }
+
+.footer__socials {
+  display: flex;
+  gap: var(--space-1);
+  margin-top: var(--space-3);
+}
+
+/* ====================== nav + contact columns ====================== */
 
 .footer__col-title {
   text-align: left;
@@ -58,10 +70,4 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-}
-
-.footer__socials {
-  display: flex;
-  gap: var(--space-1);
-  margin-top: var(--space-3);
 }
