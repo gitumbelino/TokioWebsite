@@ -16,7 +16,7 @@ export default function Hero() {
                             label="Excelência Comprovada"
                         />
                         <h1>Preparação Rigorosa Para
-                            <span>Concursos Públicos</span>
+                            <span> Concursos Públicos</span>
                         </h1>
                         <p>Metodologia militar aplicada ao ensino civil.
                             Disciplina, foco e resultados estruturados para

@@ -1,0 +1,198 @@
+/* ============================================
+   Location
+   location.css
+   ============================================ */
+
+/* Page-level grid: form left, map+hours right */
+.contacts__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.contacts__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .contacts__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ---- Map ---- */
+
+.location__map-wrapper {
+  position: relative;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-surface-card);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  height: 300px;
+}
+
+/* Overlay fades on hover to invite interaction */
+.location__map-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-navy-deep);
+  opacity: 0.12;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.location__map-wrapper:hover .location__map-overlay {
+  opacity: 0;
+}
+
+.location__map {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Floating address badge */
+.location__badge {
+  position: absolute;
+  bottom: var(--space-2);
+  left: var(--space-2);
+  right: var(--space-2);
+  background-color: var(--color-surface-base);
+  border: 1px solid var(--color-surface-card);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  z-index: 2;
+}
+
+.location__badge-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-navy-deep);
+  color: var(--color-text-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.location__badge-title {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-navy-deep);
+  margin-bottom: 2px;
+}
+
+.location__badge-address {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-navy-light);
+  line-height: 1.5;
+}
+
+/* ---- Opening hours ---- */
+
+.location__hours {
+  background-color: var(--color-surface-base);
+  border: 1px solid var(--color-surface-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+}
+
+.location__hours-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-navy-deep);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.location__hours-title i {
+  color: var(--color-accent-primary);
+}
+
+.location__hours-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.location__hours-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-surface-card);
+}
+
+.location__hours-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.location__hours-day {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-navy-light);
+  letter-spacing: 0.05em;
+}
+
+.location__hours-time {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-navy-deep);
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-surface-card);
+  border-radius: var(--radius-sm);
+  padding: 3px var(--space-2);
+}
+
+.location__hours-time--closed {
+  color: var(--color-accent-primary);
+  background-color: var(--color-accent-primary-subtle);
+  border-color: var(--color-accent-primary-border);
+}
+
+.location__hours-note {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-surface-card);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-navy-muted);
+  line-height: 1.6;
+  display: flex;
+  gap: var(--space-1);
+}
+
+.location__hours-note i {
+  color: var(--color-accent-primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}

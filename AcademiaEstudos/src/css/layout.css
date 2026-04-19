@@ -243,8 +243,7 @@ body {
 }
 
 .hero__media {
-  /* Image/visual side */
-  border-radius: var(--radius-md);
+  /* Image/visual side — colors and borders in hero.css */
   overflow: hidden;
 }
 
